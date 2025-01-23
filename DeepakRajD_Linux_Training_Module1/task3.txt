@@ -1,0 +1,7 @@
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ mkdir -p dir1/dir2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ touch dir1/dir2/file3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ln -s dir1/dir2/file3 dir1/slink
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l dir1
+total 4
+drwxrwxr-x 2 vboxuser vboxuser 4096 Jan 23 00:14 dir2
+lrwxrwxrwx 1 vboxuser vboxuser   15 Jan 23 00:16 slink -> dir1/dir2/file3

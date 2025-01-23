@@ -1,0 +1,229 @@
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ script console_output_module1.txt
+Script started, output log file is 'console_output_module1.txt'.
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ touch file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:05 console_output_module1.txt
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:08 file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ chmod a+x file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l file1
+-rwxrwxr-x 1 vboxuser vboxuser 0 Jan 23 00:08 file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ touch file2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l file2
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:10 file2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ chmod g-w file2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l file2
+-rw-r--r-- 1 vboxuser vboxuser 0 Jan 23 00:10 file2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ mkdir -p dir1/dir2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ touch dir1/dir2/file3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ln -s dir1/dir2/file3 dir1/slink
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l dir1
+total 4
+drwxrwxr-x 2 vboxuser vboxuser 4096 Jan 23 00:14 dir2
+lrwxrwxrwx 1 vboxuser vboxuser   15 Jan 23 00:16 slink -> dir1/dir2/file3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.1  0.5 166628 11700 ?        Ss   Jan22   0:04 /sbin/init splash
+root           2  0.0  0.0      0     0 ?        S    Jan22   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        S    Jan22   0:00 [pool_workqueue_release]
+root           4  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-rcu_g]
+root           5  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-rcu_p]
+root           6  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-slub_]
+root           7  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-netns]
+root           9  0.0  0.0      0     0 ?        I    Jan22   0:00 [kworker/0:1-events]
+root          10  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/0:0H-events_highpri]
+root          12  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-mm_pe]
+root          13  0.0  0.0      0     0 ?        I    Jan22   0:00 [rcu_tasks_kthread]
+root          14  0.0  0.0      0     0 ?        I    Jan22   0:00 [rcu_tasks_rude_kthread]
+root          15  0.0  0.0      0     0 ?        I    Jan22   0:00 [rcu_tasks_trace_kthread]
+root          16  0.0  0.0      0     0 ?        S    Jan22   0:00 [ksoftirqd/0]
+root          17  0.0  0.0      0     0 ?        R    Jan22   0:02 [rcu_preempt]
+root          18  0.0  0.0      0     0 ?        S    Jan22   0:00 [migration/0]
+root          19  0.0  0.0      0     0 ?        S    Jan22   0:00 [idle_inject/0]
+root          20  0.0  0.0      0     0 ?        S    Jan22   0:00 [cpuhp/0]
+root          21  0.0  0.0      0     0 ?        S    Jan22   0:00 [cpuhp/1]
+root          22  0.0  0.0      0     0 ?        S    Jan22   0:00 [idle_inject/1]
+root          23  0.0  0.0      0     0 ?        S    Jan22   0:00 [migration/1]
+root          24  0.0  0.0      0     0 ?        S    Jan22   0:01 [ksoftirqd/1]
+root          25  0.0  0.0      0     0 ?        I    Jan22   0:02 [kworker/1:0-events]
+root          26  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/1:0H-events_highpri]
+root          27  0.0  0.0      0     0 ?        S    Jan22   0:00 [kdevtmpfs]
+root          28  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-inet_]
+root          30  0.0  0.0      0     0 ?        S    Jan22   0:00 [kauditd]
+root          31  0.0  0.0      0     0 ?        S    Jan22   0:00 [khungtaskd]
+root          32  0.0  0.0      0     0 ?        S    Jan22   0:00 [oom_reaper]
+root          34  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-write]
+root          35  0.0  0.0      0     0 ?        S    Jan22   0:01 [kcompactd0]
+root          36  0.0  0.0      0     0 ?        SN   Jan22   0:00 [ksmd]
+root          38  0.0  0.0      0     0 ?        SN   Jan22   0:00 [khugepaged]
+root          39  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-kinte]
+root          40  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-kbloc]
+root          41  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-blkcg]
+root          42  0.0  0.0      0     0 ?        S    Jan22   0:00 [irq/9-acpi]
+root          43  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-tpm_d]
+root          44  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-ata_s]
+root          45  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-md]
+root          46  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-md_bi]
+root          47  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-edac-]
+root          48  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-devfr]
+root          49  0.0  0.0      0     0 ?        S    Jan22   0:00 [watchdogd]
+root          50  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/0:1H-kblockd]
+root          51  0.0  0.0      0     0 ?        S    Jan22   0:00 [kswapd0]
+root          52  0.0  0.0      0     0 ?        S    Jan22   0:00 [ecryptfs-kthread]
+root          53  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-kthro]
+root          54  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-acpi_]
+root          56  0.0  0.0      0     0 ?        S    Jan22   0:00 [scsi_eh_0]
+root          57  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-scsi_]
+root          58  0.0  0.0      0     0 ?        S    Jan22   0:00 [scsi_eh_1]
+root          59  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-scsi_]
+root          61  0.1  0.0      0     0 ?        I    Jan22   0:05 [kworker/u4:5-ext4-rsv-conversion]
+root          62  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-mld]
+root          64  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-ipv6_]
+root          72  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-kstrp]
+root          74  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/u5:0]
+root          87  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-charg]
+root         128  0.0  0.0      0     0 ?        S    Jan22   0:00 [scsi_eh_2]
+root         129  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-scsi_]
+root         160  0.0  0.0      0     0 ?        S    Jan22   0:00 [jbd2/sda3-8]
+root         161  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-ext4-]
+root         200  0.0  0.7  48284 16004 ?        S<s  Jan22   0:01 /lib/systemd/systemd-journald
+root         228  0.0  0.0      0     0 ?        S    Jan22   0:00 [irq/18-vmwgfx]
+root         229  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-ttm]
+root         244  0.0  0.3  27172  7168 ?        Ss   Jan22   0:00 /lib/systemd/systemd-udevd
+root         344  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/R-crypt]
+systemd+     405  0.2  0.3  14836  6784 ?        Ss   Jan22   0:10 /lib/systemd/systemd-oomd
+systemd+     408  0.0  0.6  25540 13784 ?        Ss   Jan22   0:00 /lib/systemd/systemd-resolved
+systemd+     411  0.0  0.3  89388  7552 ?        Ssl  Jan22   0:00 /lib/systemd/systemd-timesyncd
+root         636  0.0  0.3 248564  7752 ?        Ssl  Jan22   0:00 /usr/libexec/accounts-daemon
+root         637  0.0  0.0   2816  1920 ?        Ss   Jan22   0:00 /usr/sbin/acpid
+avahi        639  0.0  0.1   7628  3968 ?        Ss   Jan22   0:00 avahi-daemon: running [Ubuntu.local]
+root         640  0.0  0.1  18152  2944 ?        Ss   Jan22   0:00 /usr/sbin/cron -f -P
+message+     643  0.0  0.3  10964  6528 ?        Ss   Jan22   0:02 @dbus-daemon --system --address=systemd: --nofork --n
+root         644  0.0  0.9 269768 18748 ?        Ssl  Jan22   0:01 /usr/sbin/NetworkManager --no-daemon
+root         651  0.0  0.1  82700  3968 ?        Ssl  Jan22   0:00 /usr/sbin/irqbalance --foreground
+root         653  0.0  1.0  49716 21356 ?        Ss   Jan22   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-s
+root         656  0.1  0.5 251528 11260 ?        Ssl  Jan22   0:05 /usr/libexec/polkitd --no-debug
+root         659  0.0  0.3 248752  7552 ?        Ssl  Jan22   0:00 /usr/libexec/power-profiles-daemon
+syslog       661  0.0  0.2 222404  5760 ?        Ssl  Jan22   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         672  0.1  1.5 1321184 31528 ?       Ssl  Jan22   0:04 /usr/lib/snapd/snapd
+root         674  0.0  0.3 245036  7040 ?        Ssl  Jan22   0:00 /usr/libexec/switcheroo-control
+root         675  0.0  0.4  23652  8116 ?        Ss   Jan22   0:00 /lib/systemd/systemd-logind
+root         676  0.0  0.6 393096 13608 ?        Ssl  Jan22   0:00 /usr/libexec/udisks2/udisksd
+root         680  0.0  0.3  16504  6528 ?        Ss   Jan22   0:00 /sbin/wpa_supplicant -u -s -O /run/wpa_supplicant
+avahi        707  0.0  0.0   7444  1280 ?        S    Jan22   0:00 avahi-daemon: chroot helper
+root         731  0.0  0.6  81672 13952 ?        Ss   Jan22   0:00 /usr/sbin/cupsd -l
+root         733  0.0  0.6 317976 12716 ?        Ssl  Jan22   0:00 /usr/sbin/ModemManager
+root         756  0.0  1.1 126808 23808 ?        Ssl  Jan22   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unatt
+root         765  0.0  0.4 250004  9088 ?        Ssl  Jan22   0:00 /usr/sbin/gdm3
+lp           766  0.0  0.3  16288  6656 ?        S    Jan22   0:00 /usr/lib/cups/notifier/dbus dbus://
+root         794  0.0  0.5 172636 11648 ?        Ssl  Jan22   0:00 /usr/sbin/cups-browsed
+kernoops     821  0.0  0.1  13092  2476 ?        Ss   Jan22   0:00 /usr/sbin/kerneloops --test
+kernoops     826  0.0  0.1  13092  2460 ?        Ss   Jan22   0:00 /usr/sbin/kerneloops
+rtkit        892  0.0  0.1 154004  3456 ?        SNsl Jan22   0:00 /usr/libexec/rtkit-daemon
+root        1041  0.0  0.4 251012  9088 ?        Ssl  Jan22   0:00 /usr/libexec/upowerd
+root        1047  0.0  1.0 306880 20792 ?        Ssl  Jan22   0:00 /usr/libexec/packagekitd
+colord      1196  0.0  0.6 253988 13256 ?        Ssl  Jan22   0:00 /usr/libexec/colord
+root        1255  0.0  0.0      0     0 ?        I<   Jan22   0:00 [kworker/1:2H-kblockd]
+root        1269  0.0  0.5 326848 11132 ?        Sl   Jan22   0:00 gdm-session-worker [pam/gdm-password]
+vboxuser    1281  0.0  0.5  17940 10712 ?        Ss   Jan22   0:02 /lib/systemd/systemd --user
+vboxuser    1282  0.0  0.2 170032  5744 ?        S    Jan22   0:00 (sd-pam)
+vboxuser    1288  0.0  0.3  48224  6656 ?        S<sl Jan22   0:00 /usr/bin/pipewire
+vboxuser    1289  0.0  0.3  32112  6656 ?        Ssl  Jan22   0:00 /usr/bin/pipewire-media-session
+vboxuser    1290  0.0  1.3 1430764 26288 ?       S<sl Jan22   0:00 /usr/bin/pulseaudio --daemonize=no --log-target=journ
+vboxuser    1305  0.0  0.3 249556  7824 ?        Sl   Jan22   0:00 /usr/bin/gnome-keyring-daemon --daemonize --login
+vboxuser    1316  0.0  0.2   9888  6016 ?        Ss   Jan22   0:02 /usr/bin/dbus-daemon --session --address=systemd: --n
+vboxuser    1317  0.0  0.3 545568  7552 ?        Ssl  Jan22   0:00 /usr/libexec/xdg-document-portal
+vboxuser    1319  0.0  0.2 171048  6016 tty2     Ssl+ Jan22   0:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESS
+vboxuser    1322  0.0  0.3 244808  6400 ?        Ssl  Jan22   0:00 /usr/libexec/xdg-permission-store
+vboxuser    1325  0.0  0.7 231700 16000 tty2     Sl+  Jan22   0:00 /usr/libexec/gnome-session-binary --session=ubuntu
+root        1335  0.0  0.0   2796  1920 ?        Ss   Jan22   0:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unm
+vboxuser    1389  0.0  0.2 100568  5760 ?        Ssl  Jan22   0:00 /usr/libexec/gnome-session-ctl --monitor
+vboxuser    1402  0.0  0.4 249300  8064 ?        Ssl  Jan22   0:00 /usr/libexec/gvfsd
+vboxuser    1414  0.0  0.3 455660  6784 ?        Sl   Jan22   0:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+vboxuser    1421  0.0  0.8 527836 17664 ?        Ssl  Jan22   0:00 /usr/libexec/gnome-session-binary --systemd-service -
+vboxuser    1440  0.0  0.3 309624  7936 ?        Sl   Jan22   0:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+vboxuser    1443  5.0 17.6 4269856 355392 ?      Ssl  Jan22   2:54 /usr/bin/gnome-shell
+vboxuser    1451  0.0  0.2   8432  4352 ?        S    Jan22   0:00 /usr/bin/dbus-daemon --config-file=/usr/share/default
+vboxuser    1485  0.0  0.9 582912 18304 ?        Sl   Jan22   0:00 /usr/libexec/gnome-shell-calendar-server
+vboxuser    1491  0.0  1.2 400852 25728 ?        Ssl  Jan22   0:00 /usr/libexec/evolution-source-registry
+vboxuser    1498  0.0  2.0 590648 40576 ?        Sl   Jan22   0:00 /usr/libexec/goa-daemon
+vboxuser    1501  0.0  1.5 849152 30976 ?        Ssl  Jan22   0:00 /usr/libexec/evolution-calendar-factory
+vboxuser    1502  0.0  0.5  39128 12032 ?        Ss   Jan22   0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-des
+vboxuser    1523  0.0  0.5 398392 11392 ?        Ssl  Jan22   0:00 /usr/libexec/gvfs-udisks2-volume-monitor
+vboxuser    1534  0.0  0.7 347060 15616 ?        Sl   Jan22   0:00 /usr/libexec/goa-identity-service
+vboxuser    1564  0.0  0.3 245292  6784 ?        Ssl  Jan22   0:00 /usr/libexec/gvfs-goa-volume-monitor
+vboxuser    1573  0.0  0.2 156972  6016 ?        Ssl  Jan22   0:00 /usr/libexec/dconf-service
+vboxuser    1578  0.0  1.4 680924 28928 ?        Ssl  Jan22   0:00 /usr/libexec/evolution-addressbook-factory
+vboxuser    1588  0.0  0.3 245116  6656 ?        Ssl  Jan22   0:00 /usr/libexec/gvfs-mtp-volume-monitor
+vboxuser    1597  0.0  0.4 323868  8192 ?        Ssl  Jan22   0:01 /usr/libexec/gvfs-afc-volume-monitor
+vboxuser    1606  0.0  1.5 431796 30580 ?        Sl   Jan22   0:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-des
+vboxuser    1607  0.0  0.3 246072  7168 ?        Ssl  Jan22   0:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+vboxuser    1632  0.3  3.6 875188 73996 ?        Sl   Jan22   0:12 /usr/bin/nautilus --gapplication-service
+vboxuser    1633  0.0  0.4 323508  9216 ?        Sl   Jan22   0:00 /usr/libexec/gvfsd-trash --spawner :1.14 /org/gtk/gvf
+vboxuser    1647  0.0  1.3 2534352 28040 ?       Sl   Jan22   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.Shell.N
+vboxuser    1649  0.0  0.3 162688  7680 ?        Sl   Jan22   0:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+vboxuser    1661  0.0  0.0   2892  1664 ?        Ss   Jan22   0:00 sh -c /usr/bin/ibus-daemon --panel disable $([ "$XDG_
+vboxuser    1665  0.0  0.3 319080  7040 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-a11y-settings
+vboxuser    1666  0.1  0.5 323944 12088 ?        Sl   Jan22   0:05 /usr/bin/ibus-daemon --panel disable
+vboxuser    1670  0.0  1.2 459664 25092 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-color
+vboxuser    1673  0.0  0.8 384124 16512 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-datetime
+vboxuser    1675  0.0  0.4 320584  8320 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-housekeeping
+vboxuser    1677  0.0  1.0 422408 21240 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-keyboard
+vboxuser    1680  0.0  1.3 872788 26612 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-media-keys
+vboxuser    1683  0.0  1.3 724172 27780 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-power
+vboxuser    1687  0.0  0.5 258516 11648 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-print-notifications
+vboxuser    1690  0.0  0.3 466516  7040 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-rfkill
+vboxuser    1696  0.0  0.3 244948  6400 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-screensaver-proxy
+vboxuser    1697  0.0  0.5 474464 11008 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-sharing
+vboxuser    1702  0.0  0.4 320960  8448 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-smartcard
+vboxuser    1707  0.0  0.4 327996  9856 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-sound
+vboxuser    1708  0.0  1.0 422992 21892 ?        Ssl  Jan22   0:00 /usr/libexec/gsd-wacom
+vboxuser    1716  0.0  3.1 831232 64324 ?        Sl   Jan22   0:01 /usr/libexec/evolution-data-server/evolution-alarm-no
+vboxuser    1720  0.0  0.3 172140  7424 ?        Sl   Jan22   0:00 /usr/libexec/ibus-memconf
+vboxuser    1725  0.2  1.3 355920 28120 ?        Sl   Jan22   0:07 /usr/libexec/ibus-extension-gtk3
+vboxuser    1735  0.0  0.3 245916  7680 ?        Sl   Jan22   0:00 /usr/libexec/ibus-portal
+vboxuser    1750  0.0  0.3 232272  7808 ?        Sl   Jan22   0:00 /usr/libexec/gsd-disk-utility-notify
+vboxuser    1785  0.0  0.7 351016 15232 ?        Sl   Jan22   0:00 /usr/libexec/gsd-printer
+vboxuser    1828  0.0  0.3 171712  6784 ?        Ssl  Jan22   0:00 /usr/libexec/gvfsd-metadata
+vboxuser    1842  0.0  0.3 172140  7680 ?        Sl   Jan22   0:01 /usr/libexec/ibus-engine-simple
+vboxuser    1855  0.2  1.6 656536 32804 ?        SNsl Jan22   0:06 /usr/libexec/tracker-miner-fs-3
+vboxuser    1859  0.0  0.6 632468 14080 ?        Ssl  Jan22   0:00 /usr/libexec/xdg-desktop-portal
+vboxuser    1867  0.0  1.4 671528 29300 ?        Ssl  Jan22   0:00 /usr/libexec/xdg-desktop-portal-gnome
+vboxuser    1887  0.0  1.3 2608100 28168 ?       Sl   Jan22   0:00 /usr/bin/gjs /usr/share/gnome-shell/org.gnome.ScreenS
+vboxuser    1923  0.0  1.2 352580 24820 ?        Ssl  Jan22   0:00 /usr/libexec/xdg-desktop-portal-gtk
+vboxuser    1997  0.0  1.5 502748 31364 ?        Sl   Jan22   0:00 update-notifier
+vboxuser    2027  0.4  2.6 562588 52592 ?        Rsl  Jan22   0:15 /usr/libexec/gnome-terminal-server
+vboxuser    2050  0.0  0.2  20056  5632 pts/0    Ss   Jan22   0:00 bash
+root        2205  0.0  0.0      0     0 ?        I    Jan22   0:00 [kworker/0:0-cgroup_destroy]
+root        2219  0.1  0.0      0     0 ?        I    Jan22   0:02 [kworker/u4:0-events_unbound]
+root        2301  0.0  0.0      0     0 ?        I    00:00   0:00 [kworker/1:2-events]
+vboxuser    2319  0.2  3.0 2795356 60560 ?       Sl   00:01   0:02 gjs /usr/share/gnome-shell/extensions/ding@rastersoft
+root        2363  0.3  0.0      0     0 ?        I    00:02   0:03 [kworker/u4:1-events_unbound]
+vboxuser    2401  0.0  0.1  17044  2304 pts/0    S+   00:05   0:00 script console_output_module1.txt
+vboxuser    2402  0.0  0.2  19928  5248 pts/1    Ss   00:05   0:00 bash -i
+root        2482  0.0  0.0      0     0 ?        I    00:14   0:00 [kworker/u4:2]
+vboxuser    2503  0.0  0.1  21328  3456 pts/1    R+   00:17   0:00 ps aux
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ mkdir dir5
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ cd dir5
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls
+temp1  temp2  temp3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls -lt
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp3
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp2
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp4
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls -lt
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:20 temp4
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp3
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp2
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ cd ..
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ exit
+exit
+Script done.
+
