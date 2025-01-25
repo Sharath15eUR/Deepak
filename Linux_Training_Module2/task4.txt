@@ -1,0 +1,4 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ps aux --sort=-%mem | head -n 2
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+vboxuser    4064  8.9 18.4 3101960 372252 ?      Sl   21:50   6:32 /snap/firefox
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ kill 4064

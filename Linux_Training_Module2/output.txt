@@ -1,0 +1,74 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ls -lh
+total 2.1M
+-rw-rw-r-- 1 vboxuser vboxuser  273 Jan 25 22:19 config.txt
+-rw-rw-r-- 1 vboxuser vboxuser 2.0M Jan 25 22:42 largefile.txt
+-rw-rw-r-- 1 vboxuser vboxuser  730 Jan 25 22:17 log.txt
+-rw-rw-r-- 1 vboxuser vboxuser  40K Jan 25 22:35 sample.txt
+-rw-rw-r-- 1 vboxuser vboxuser    0 Jan 25 22:45 updated_config.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ find . -type f -size +1M
+./largefile.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ sed 's/localhost/127.0.0.1/g' config.txt
+# Server Configuration
+server_name=127.0.0.1
+db_host=127.0.0.1
+db_port=3306
+admin_email=admin@127.0.0.1
+log_file=/var/log/127.0.0.1_app.log
+log_level=INFO
+app_mode=development
+cache_server=127.0.0.1
+redis_port=6379
+session_timeout=300
+auth_server=127.0.0.1
+auth_port=8080
+
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat updated_config.txt
+# Server Configuration
+server_name=127.0.0.1
+db_host=127.0.0.1
+db_port=3306
+admin_email=admin@127.0.0.1
+log_file=/var/log/127.0.0.1_app.log
+log_level=INFO
+app_mode=development
+cache_server=127.0.0.1
+redis_port=6379
+session_timeout=300
+auth_server=127.0.0.1
+auth_port=8080
+
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ grep "ERROR" log | grep -v "DEBUG" > filtered_log.txt
+grep: log: No such file or directory
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat log
+cat: log: No such file or directory
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat log.txt
+DEBUG: Starting the application initialization.
+ERROR: Unable to connect to the database.
+INFO: User 'admin' logged in successfully.
+DEBUG: Fetching configuration settings from the server.
+ERROR: DEBUG - Configuration settings could not be applied.
+INFO: Scheduled job 'backup' completed successfully.
+DEBUG: Connection to server timed out. Retrying...
+ERROR: Failed to fetch data from API endpoint '/users'.
+INFO: Maintenance mode activated.
+ERROR: DEBUG - Query execution failed due to a syntax error.
+DEBUG: Reloading application modules.
+ERROR: Missing required parameter in the request.
+INFO: Shutting down the system gracefully.
+DEBUG: Closing unused network connections.
+ERROR: DEBUG - Unexpected server response received.
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ grep "ERROR" log.txt | grep -v "DEBUG" > filtered_log.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat filtered_log.txt
+ERROR: Unable to connect to the database.
+ERROR: Failed to fetch data from API endpoint '/users'.
+ERROR: Missing required parameter in the request.
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ps aux --sort=-%mem | head -n 2
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+vboxuser    4064  8.9 18.4 3101960 372252 ?      Sl   21:50   6:32 /snap/firefox
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ kill 4064
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ip route | awk '/default/ {print $3}' | sort
+10.0.2.2
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ^C
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ 
+

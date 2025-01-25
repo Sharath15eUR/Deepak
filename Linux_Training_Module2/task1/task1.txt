@@ -1,0 +1,10 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ls -lh
+total 2.1M
+-rw-rw-r-- 1 vboxuser vboxuser  273 Jan 25 22:19 config.txt
+-rw-rw-r-- 1 vboxuser vboxuser 2.0M Jan 25 22:42 largefile.txt
+-rw-rw-r-- 1 vboxuser vboxuser  730 Jan 25 22:17 log.txt
+-rw-rw-r-- 1 vboxuser vboxuser  40K Jan 25 22:35 sample.txt
+-rw-rw-r-- 1 vboxuser vboxuser    0 Jan 25 22:45 updated_config.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ find . -type f -size +1M > files_larger_than_1MB.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat files_larger_than_1MB.txt
+./largefile.txt
