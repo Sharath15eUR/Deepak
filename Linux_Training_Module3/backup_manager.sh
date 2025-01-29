@@ -74,5 +74,6 @@ echo "Total files backed up: $count" >> "$report"
 echo "Total size of files: $size bytes" >> "$report"
 echo "Backup directory: $backup" >> "$report"
 
-echo "Backup finished! Report saved at: $report"
+echo "Report saved at: $report"
+echo "Backup done!!!"
 
