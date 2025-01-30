@@ -1,0 +1,5 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module4$ ls -l extract_params.sh 
+-rwxrwxr-x 1 vboxuser vboxuser 411 Jan 30 17:13 extract_params.sh
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module4$ ./extract_params.sh input.txt
+Ouput saved in output.txt
+
