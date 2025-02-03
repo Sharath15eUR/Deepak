@@ -3,21 +3,26 @@ vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.s
 Searching directory 'test_directory/' for keyword 'log'...
 Found 'log' in file: test_directory//log1.txt
 Found 'log' in file: test_directory//sub_dir/log2.txt
-vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh -f script.sh/ -k script
-Error: File 'script.sh/' does not exist.
-vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ls
-errors.log  file_analyzer.sh  test_directory
-vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ls
-errors.log  file_analyzer.sh  script.sh  test_directory
 vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh -f script.sh -k command
+./file_analyzer.sh: line 81: validate_input: command not found
 Searching in file 'script.sh' for keyword 'command'...
-Keyword 'command' found in file 'script.sh'.S
-vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh -help
-Usage: ./file_analyzer.sh [options]
+Keyword 'command' found in file 'script.sh'.
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh --help
+Usage: ./file_analyzer.sh [OPTIONS]
+
 Options:
-  -d <directory>   Directory to search.
-  -k <keyword>     Keyword to search.
-  -f <file>        File to search directly.
-  --help           Display this help menu.
+  -d <directory>   Search for a keyword in a directory (recursive search)
+  -k <keyword>     Specify the keyword to search for
+  -f <file>        Search for a keyword in a specific file
+  --help           Display this help menu
+
+Examples:
+  ./file_analyzer.sh -d Folder -k keyword
+  ./file_analyzer.sh -f Folder/f1.txt -k keyword
+  ./file_analyzer.sh --help
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh -d no_directory/ -k log
+Error: Directory 'no_directory/' does not exist.
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ ./file_analyzer.sh -f file.sh -k command
+Error: File 'file.sh' does not exist.
 vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module5$ 
 
