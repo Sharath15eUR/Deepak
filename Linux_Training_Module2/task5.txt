@@ -1,2 +1,2 @@
-vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ip route | awk '/default/ {print $3}' | sort
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ ip route show | grep 'via' | awk '{print $3}' | sort -u
 10.0.2.2
