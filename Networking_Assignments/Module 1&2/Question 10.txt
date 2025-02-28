@@ -16,7 +16,7 @@ DNS Server
 Client Confirms:
 The client chooses one offer and sends a DHCP Request back to the server, asking for the offered IP.
 
-4️.DHCP Acknowledgment (ACK)
+4.DHCP Acknowledgment (ACK)
 Final Confirmation:
 The server sends DHCP ACK, confirming the IP lease.
 

@@ -1,6 +1,6 @@
 Default Gateway is reachable (checked using ping command)
 
-C:\Users\dharmalingam>ipconfig                                                                                                                                                                                                                  
+C:\Users\deepak>ipconfig                                                                                                                                                                                                                  
 Wireless LAN adapter Wi-Fi:      
       	Connection-specific DNS Suffix  . :                                                                                     
 	IPv6 Address. . . . . . . . . . . : 2001:4490:4e81:ac04:628a:5712:c134:fdec                                            
@@ -11,7 +11,7 @@ Wireless LAN adapter Wi-Fi:
 	Default Gateway . . . . . . . . . : fe80::4eae:1cff:fead:18d1%14                                                                                            
 				192.168.1.1          
                                                                                                                                                                                     
-C:\Users\dharmalingam>ping 192.168.1.1                                                                                                                                                                                                          
+C:\Users\deepak>ping 192.168.1.1                                                                                                                                                                                                          
 Pinging 192.168.1.1 with 32 bytes of data:                                                                              
 Reply from 192.168.1.1: bytes=32 time=5ms TTL=64                                                                        
 Reply from 192.168.1.1: bytes=32 time=4ms TTL=64                                                                        
