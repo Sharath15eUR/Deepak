@@ -1,0 +1,19 @@
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ mkdir dir5
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ cd dir5
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp2
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls
+temp1  temp2  temp3
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls -lt
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp3
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp2
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ touch temp4
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1/dir5$ ls -lt
+total 0
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:20 temp4
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp3
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp2
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:19 temp1
