@@ -1,0 +1,96 @@
+Installed TCPDUMP and captured packets (filtering also done)
+
+vboxuser@Ubuntu:~$ sudo apt install tcpdump -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+tcpdump is already the newest version (4.99.1-3ubuntu0.2).
+The following packages were automatically installed and are no longer required:
+  linux-headers-6.8.0-40-generic linux-hwe-6.8-headers-6.8.0-40
+  linux-hwe-6.8-tools-6.8.0-40 linux-image-6.8.0-40-generic
+  linux-modules-6.8.0-40-generic linux-modules-extra-6.8.0-40-generic
+  linux-tools-6.8.0-40-generic
+Use 'sudo apt autoremove' to remove them.
+0 upgraded, 0 newly installed, 0 to remove and 2 not upgraded.
+
+vboxuser@Ubuntu:~$ tcpdump -D
+1.enp0s3 [Up, Running, Connected]
+2.any (Pseudo-device that captures on all interfaces) [Up, Running]
+3.lo [Up, Running, Loopback]
+4.bluetooth-monitor (Bluetooth Linux Monitor) [Wireless]
+5.nflog (Linux netfilter log (NFLOG) interface) [none]
+6.nfqueue (Linux netfilter queue (NFQUEUE) interface) [none]
+7.dbus-system (D-Bus system bus) [none]
+8.dbus-session (D-Bus session bus) [none]
+
+vboxuser@Ubuntu:~$ sudo tcpdump -i enp0s3
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+00:13:34.890681 ARP, Request who-has _gateway tell _gateway, length 46
+00:13:34.923746 IP Ubuntu.54645 > multiplay.bsnl.in.domain: 50672+ [1au] PTR? 1.1.168.192.in-addr.arpa. (53)
+00:13:34.939160 IP multiplay.bsnl.in.domain > Ubuntu.54645: 50672 NXDomain 0/1/1 (130)
+00:13:34.939479 IP Ubuntu.54645 > multiplay.bsnl.in.domain: 50672+ PTR? 1.1.168.192.in-addr.arpa. (42)
+00:13:34.955567 IP multiplay.bsnl.in.domain > Ubuntu.54645: 50672 NXDomain 0/1/0 (119)
+00:13:35.363195 IP Ubuntu.54757 > multiplay.bsnl.in.domain: 64668+ [1au] PTR? 65.112.248.218.in-addr.arpa. (56)
+00:13:35.378150 IP multiplay.bsnl.in.domain > Ubuntu.54757: 64668 1/2/1 PTR multiplay.bsnl.in. (125)
+00:13:35.379849 IP Ubuntu.43692 > multiplay.bsnl.in.domain: 36268+ [1au] PTR? 8.1.168.192.in-addr.arpa. (53)
+00:13:35.394551 IP multiplay.bsnl.in.domain > Ubuntu.43692: 36268 NXDomain 0/1/1 (130)
+00:13:35.394881 IP Ubuntu.43692 > multiplay.bsnl.in.domain: 36268+ PTR? 8.1.168.192.in-addr.arpa. (42)
+00:13:35.410368 IP multiplay.bsnl.in.domain > Ubuntu.43692: 36268 NXDomain 0/1/0 (119)
+00:13:36.454212 IP _gateway > all-systems.mcast.net: igmp query v2 [max resp time 1]
+00:13:36.474412 IP Ubuntu.33579 > multiplay.bsnl.in.domain: 3274+ [1au] PTR? 1.0.0.224.in-addr.arpa. (51)
+00:13:36.936593 IP 192.168.1.4 > 224.0.0.252: igmp v2 report 224.0.0.252
+00:13:36.936594 IP 192.168.1.4 > mdns.mcast.net: igmp v2 report mdns.mcast.net
+00:13:36.936594 IP 192.168.1.4 > 239.255.255.250: igmp v2 report 239.255.255.250
+00:13:36.981872 IP multiplay.bsnl.in.domain > Ubuntu.33579: 3274 1/4/1 PTR all-systems.mcast.net. (173)
+00:13:36.994120 IP Ubuntu.32793 > multiplay.bsnl.in.domain: 34432+ [1au] PTR? 252.0.0.224.in-addr.arpa. (53)
+00:13:37.009419 IP multiplay.bsnl.in.domain > Ubuntu.32793: 34432 NXDomain 0/1/1 (110)
+00:13:37.009791 IP Ubuntu.32793 > multiplay.bsnl.in.domain: 34432+ PTR? 252.0.0.224.in-addr.arpa. (42)
+00:13:37.025681 IP multiplay.bsnl.in.domain > Ubuntu.32793: 34432 NXDomain 0/1/0 (99)
+00:13:37.028264 IP Ubuntu.42490 > multiplay.bsnl.in.domain: 57995+ [1au] PTR? 4.1.168.192.in-addr.arpa. (53)
+00:13:37.043928 IP multiplay.bsnl.in.domain > Ubuntu.42490: 57995 NXDomain 0/1/1 (130)
+00:13:37.044252 IP Ubuntu.42490 > multiplay.bsnl.in.domain: 57995+ PTR? 4.1.168.192.in-addr.arpa. (42)
+00:13:37.059178 IP multiplay.bsnl.in.domain > Ubuntu.42490: 57995 NXDomain 0/1/0 (119)
+00:13:37.061443 IP Ubuntu.45798 > multiplay.bsnl.in.domain: 33140+ [1au] PTR? 251.0.0.224.in-addr.arpa. (53)
+00:13:37.077504 IP multiplay.bsnl.in.domain > Ubuntu.45798: 33140 1/0/1 PTR mdns.mcast.net. (81)
+00:13:37.082350 IP Ubuntu.37196 > multiplay.bsnl.in.domain: 32309+ [1au] PTR? 250.255.255.239.in-addr.arpa. (57)
+00:13:37.602008 IP multiplay.bsnl.in.domain > Ubuntu.37196: 32309 NXDomain 0/1/1 (114)
+00:13:37.602328 IP Ubuntu.37196 > multiplay.bsnl.in.domain: 32309+ PTR? 250.255.255.239.in-addr.arpa. (46)
+00:13:37.618020 IP multiplay.bsnl.in.domain > Ubuntu.37196: 32309 NXDomain 0/1/0 (103)
+00:13:38.788739 IP 192.168.1.2.40776 > 239.255.255.250.1900: UDP, length 125
+00:13:38.875116 IP Ubuntu.52635 > multiplay.bsnl.in.domain: 65249+ [1au] PTR? 2.1.168.192.in-addr.arpa. (53)
+00:13:38.889656 IP multiplay.bsnl.in.domain > Ubuntu.52635: 65249 NXDomain 0/1/1 (130)
+00:13:38.890227 IP Ubuntu.52635 > multiplay.bsnl.in.domain: 65249+ PTR? 2.1.168.192.in-addr.arpa. (42)
+00:13:38.905187 IP multiplay.bsnl.in.domain > Ubuntu.52635: 65249 NXDomain 0/1/0 (119)
+00:13:40.177014 ARP, Request who-has _gateway tell Ubuntu, length 28
+00:13:40.180283 ARP, Reply _gateway is-at 4c:ae:1c:ad:18:d1 (oui Unknown), length 46
+^C
+38 packets captured
+38 packets received by filter
+0 packets dropped by kernel
+
+vboxuser@Ubuntu:~$ sudo tcpdump -i enp0s3 icmp
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C
+0 packets captured
+0 packets received by filter
+0 packets dropped by kernel
+
+vboxuser@Ubuntu:~$ sudo tcpdump -i enp0s3
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on enp0s3, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+00:15:54.870791 ARP, Request who-has _gateway tell _gateway, length 46
+00:15:54.884530 IP Ubuntu.46133 > multiplay.bsnl.in.domain: 18829+ [1au] PTR? 1.1.168.192.in-addr.arpa. (53)
+00:15:54.899261 IP multiplay.bsnl.in.domain > Ubuntu.46133: 18829 NXDomain 0/1/1 (130)
+00:15:54.899730 IP Ubuntu.46133 > multiplay.bsnl.in.domain: 18829+ PTR? 1.1.168.192.in-addr.arpa. (42)
+00:15:54.915764 IP multiplay.bsnl.in.domain > Ubuntu.46133: 18829 NXDomain 0/1/0 (119)
+00:15:54.995866 IP Ubuntu.47911 > multiplay.bsnl.in.domain: 20069+ [1au] PTR? 8.1.168.192.in-addr.arpa. (53)
+00:15:55.011617 IP multiplay.bsnl.in.domain > Ubuntu.47911: 20069 NXDomain 0/1/1 (130)
+00:15:55.012229 IP Ubuntu.47911 > multiplay.bsnl.in.domain: 20069+ PTR? 8.1.168.192.in-addr.arpa. (42)
+00:15:55.026876 IP multiplay.bsnl.in.domain > Ubuntu.47911: 20069 NXDomain 0/1/0 (119)
+^C
+9 packets captured
+9 packets received by filter
+0 packets dropped by kernel
+vboxuser@Ubuntu:~$ 
