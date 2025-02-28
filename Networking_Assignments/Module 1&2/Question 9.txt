@@ -1,0 +1,10 @@
+Logging into home router web interface
+
+Steps to login to home router web interface:
+
+1. Connect to wifi network
+2. To Find the IP address of the router
+3. Open browser and Go to http://<ipaddress> 
+4. Enter username and password of the router to see all connected devices and other info.
+
+[Credentials of the router in my house is not known] 
