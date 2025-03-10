@@ -1,0 +1,22 @@
+Name : Deepak Raj D
+
+Steps to configure a Basic LAN Interface using ip command
+
+In this we setup a basic LAN interface (enp0s8) with ip address as 192.168.1.10 (which should be in same subnet of other device 192.168.1.x)
+
+Step 1: Check available network interfaces:
+	ip a
+Step 2: Assign a static IP address to an interface (e.g., enp0s8)
+	sudo ip addr add 192.168.1.10/24 dev enp0s8
+Step 3: Bring the interface up:
+	sudo ip link set enp0s8 up
+Step 4: Set the default gateway:
+	sudo ip route add default via 192.168.1.1
+Step 5: Verify the IP configuration
+	ip addr show enp0s8
+Step 6: Verify the routing table
+	ip route show
+Step 7: Test connectivity using ping
+	ping 192.168.1.20
+
+These changes will reset after system reboot.To make the changes permanent configure netplan file 
