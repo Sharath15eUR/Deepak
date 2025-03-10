@@ -1,0 +1,86 @@
+vboxuser@Ubuntu:~$ sudo nano /etc/netplan/01-netcfg.yaml
+
+#Creating a new interface with static IP (192.168.1.20) and gateway as 192.168.1.1
+network:
+  ethernets:
+    enp0s8:
+      dhcp4: no
+      addresses:
+        - 192.168.1.20/24
+      gateway4: 192.168.1.1
+      nameservers:
+        addresses: 
+          - 8.8.8.8
+          - 8.8.4.4
+  version: 2
+
+
+vboxuser@Ubuntu:~$ ip route
+default via 192.168.1.1 dev enp0s8 proto static metric 20101 
+10.0.2.0/24 dev enp0s3 proto kernel scope link src 10.0.2.15 metric 100 
+169.254.0.0/16 dev enp0s9 proto kernel scope link src 169.254.129.173 metric 102 
+169.254.0.0/16 dev enp0s3 scope link metric 1000 
+192.168.1.0/24 dev enp0s8 proto kernel scope link src 192.168.1.20 metric 101 
+224.0.0.0/4 dev enp0s9 proto static scope link metric 102 
+
+
+PINGING FROM LINUX 
+(Windows IP is 192.168.1.10)
+
+vboxuser@Ubuntu:~$ ping 192.168.1.10
+PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=128 time=1.18 ms
+64 bytes from 192.168.1.10: icmp_seq=2 ttl=128 time=0.985 ms
+64 bytes from 192.168.1.10: icmp_seq=3 ttl=128 time=0.887 ms
+64 bytes from 192.168.1.10: icmp_seq=4 ttl=128 time=0.994 ms
+64 bytes from 192.168.1.10: icmp_seq=5 ttl=128 time=0.841 ms
+64 bytes from 192.168.1.10: icmp_seq=6 ttl=128 time=0.697 ms
+64 bytes from 192.168.1.10: icmp_seq=7 ttl=128 time=0.709 ms
+^C
+--- 192.168.1.10 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6008ms
+rtt min/avg/max/mdev = 0.697/0.899/1.181/0.158 ms
+
+
+PINGING FROM WINDOWS 
+(Linux IP is 192.168.1.20)
+
+C:\Users\dharmalingam>ping 192.168.1.20                                                                                                                                                                                                                                                                                                         
+Pinging 192.168.1.20 with 32 bytes of data:                                                                                                                             
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=64                                                                                                                       
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=64                                                                                                                       
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=64                                                                                                                       
+Reply from 192.168.1.20: bytes=32 time<1ms TTL=64                                                                                                                                                                                                                
+Ping statistics for 192.168.1.20:                                                                                                                                           
+	Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),                                                                                                                
+Approximate round trip times in milli-seconds:                                                                                                                             
+	Minimum = 0ms, Maximum = 0ms, Average = 0ms 
+
+
+
+CONFIGURING MAC ADDRESS AND PINGING
+
+vboxuser@Ubuntu:~$ sudo ifconfig enp0s8 hw ether 00:11:22:33:44:55
+vboxuser@Ubuntu:~$ ifconfig enp0s8
+enp0s8: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.20  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::a00:27ff:fe2a:c61f  prefixlen 64  scopeid 0x20<link>
+        ether 00:11:22:33:44:55  txqueuelen 1000  (Ethernet)
+        RX packets 707  bytes 69563 (69.5 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 1751  bytes 133855 (133.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+vboxuser@Ubuntu:~$ ping 192.168.1.10
+PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=128 time=1.18 ms
+64 bytes from 192.168.1.10: icmp_seq=2 ttl=128 time=0.985 ms
+64 bytes from 192.168.1.10: icmp_seq=3 ttl=128 time=0.887 ms
+64 bytes from 192.168.1.10: icmp_seq=4 ttl=128 time=0.994 ms
+64 bytes from 192.168.1.10: icmp_seq=5 ttl=128 time=0.841 ms
+64 bytes from 192.168.1.10: icmp_seq=6 ttl=128 time=0.697 ms
+64 bytes from 192.168.1.10: icmp_seq=7 ttl=128 time=0.709 ms
+^C
+--- 192.168.1.10 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6008ms
+rtt min/avg/max/mdev = 0.697/0.899/1.181/0.158 ms
+
