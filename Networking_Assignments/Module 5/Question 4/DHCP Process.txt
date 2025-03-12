@@ -1,0 +1,24 @@
+Various steps in DHCP
+
+1. DHCP Discover
+Client Broadcasts:
+When a device connects to the network, it sends a DHCP Discover message to find available DHCP servers.
+
+2.DHCP Offer
+Server Responds:
+The DHCP server replies with a DHCP Offer message containing:
+Available IP Address
+Subnet Mask
+Gateway IP
+DNS Server
+
+3.DHCP Request
+Client Confirms:
+The client chooses one offer and sends a DHCP Request back to the server, asking for the offered IP.
+
+4.DHCP Acknowledgment (ACK)
+Final Confirmation:
+The server sends DHCP ACK, confirming the IP lease.
+
+Now the client can use the IP address for communication.
+
