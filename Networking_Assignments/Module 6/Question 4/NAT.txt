@@ -1,0 +1,14 @@
+Name : Deepak Raj D
+
+How NAT Handles Private IPs?
+Private IPs cannot be routed on the internet. NAT (Network Address Translation) converts private IPs into a public IP for internet access.
+
+Example NAT Process:
+Before NAT: 192.168.10.5 → Private IP
+After NAT: 200.0.0.3 → Public IP
+Internet sees the request coming from 200.0.0.3, not 192.168.10.5.
+
+NAT Types:
+1. Static NAT – One-to-one mapping between private & public IPs.
+2. Dynamic NAT – Private IPs are assigned public IPs dynamically.
+3. PAT (Port Address Translation) – Multiple private IPs share a single public IP (most common).

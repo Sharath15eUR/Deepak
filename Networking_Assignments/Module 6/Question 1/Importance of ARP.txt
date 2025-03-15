@@ -1,0 +1,21 @@
+Address Resolution Protocol (ARP) is a fundamental network protocol used to map an IP address (logical address) to a MAC address (physical address) within a local network. Since devices communicate using MAC addresses at the data link layer (Layer 2), ARP ensures that IP packets can be delivered correctly to the destination host.
+
+Importance of ARP
+When a device wants to send data to another device within the same subnet, it needs to know the recipient's MAC address.
+ARP helps resolve the IP-to-MAC mapping, ensuring that packets reach the correct device.
+When a device communicates with a different subnet, the packet must go through a default gateway (router). The sender must first determine the MAC address of the router using ARP before forwarding the packet.
+
+
+Use of Sender’s IP in ARP (Address Resolution Protocol)
+In the ARP protocol, the sender's IP address is used for:
+1.Identifying the Source
+The sender’s IP address in an ARP request helps the receiver know who is asking for a MAC address.
+
+2. Updating ARP Cache
+When an ARP reply is received, the sender’s IP and MAC are stored in the receiver’s ARP table.
+
+3.Preventing Duplicate IPs
+ARP replies allow devices to detect conflicts if another device already has the same IP.
+
+4.Facilitating Two-Way Communication
+Once the MAC address is resolved using the sender’s IP, data packets can be sent back to the sender.
