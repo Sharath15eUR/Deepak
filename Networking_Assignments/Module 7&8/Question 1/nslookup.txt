@@ -1,0 +1,54 @@
+C:\WINDOWS\system32>nslookup www.google.com                                                                             
+Server:  dns.google                                                                                                     
+Address:  8.8.8.8                                                                                                                                                                                                                               
+Non-authoritative answer:                                                                                               
+Name:    www.google.com                                                                                                 
+Addresses:  2404:6800:4007:823::2004                                                                                              
+142.250.182.132                                                                                                                                                                                                                                                                                                                                               
+
+C:\WINDOWS\system32>nslookup www.amazon.com                                                                             
+Server:  dns.google                                                                                                     
+Address:  8.8.8.8                                                                                                                                                                                                                               
+Non-authoritative answer:                                                                                               
+Name:    d3ag4hukkh62yn.cloudfront.net                                                                                  
+Addresses:  2600:9000:2354:8400:7:49a5:5fd4:b121                                                                                  
+2600:9000:2354:2a00:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:3800:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:c800:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:7000:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:c400:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:e400:7:49a5:5fd4:b121                                                                                    
+2600:9000:2354:800:7:49a5:5fd4:b121                                                                                     
+108.159.17.235                                                                                                
+Aliases:  www.amazon.com                                                                                                          
+tp.47cf2c8c9-frontier.amazon.com                                                                                                                                                                                                                                                                                                                              
+
+C:\WINDOWS\system32>nslookup www.github.com                                                                             
+Server:  dns.google 
+Address:  8.8.8.8                                                                                                                                                                                                                               
+Non-authoritative answer:                                                                                               
+Name:    github.com                                                                                                     
+Address:  20.207.73.82                                                                                                  
+Aliases:  www.github.com                                                                                                                                                                                                                                                                                                                                                
+
+C:\WINDOWS\system32>nslookup www.cisco.com                                                                              
+Server:  dns.google                                                                                                     
+Address:  8.8.8.8                                                                                                                                                                                                                               
+Non-authoritative answer:                                                                                               
+Name:    e2867.dsca.akamaiedge.net                                                                                      
+Addresses:  2600:1417:71:188::b33                                                                                                 
+2600:1417:71:18a::b33                                                                                                   
+23.209.254.61                                                                                                 
+Aliases:  www.cisco.com                                                                                                          
+ www.cisco.com.akadns.net                                                                                                
+wwwds.cisco.com.edgekey.net                                                                                             
+wwwds.cisco.com.edgekey.net.globalredir.akadns.net                                                                                                                                                                                                                                                                                                            
+
+C:\WINDOWS\system32>nslookup www.facebook.com                                                                           
+Server:  dns.google                                                                                                     
+Address:  8.8.8.8                                                                                                                                                                                                                               
+Non-authoritative answer:                                                                                               
+Name:    star-mini.c10r.facebook.com                                                                                    
+Addresses:  2a03:2880:f34f:1:face:b00c:0:25de                                                                                     
+163.70.143.35                                                                                                 
+Aliases:  www.facebook.com 

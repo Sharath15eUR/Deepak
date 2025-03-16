@@ -1,0 +1,17 @@
+Troubleshooting Inter-VLAN communication between VLAN 10 and VLAN 20
+
+Steps to troubleshoot:
+
+1. Verify VLAN configuration:
+	command: show vlan brief (on switch)
+	Ensure VLAN 10 and VLAN 20 are present. If not create them and assign switch ports to VLANs.
+
+2. Enable Inter-VLAN Routing:
+	A Router is needed for VLAN 10 and VLAN 20 to communicate with each other.
+	Configure the router by connecting to switch using trunk port and configure sub interfaces (gig0/1.10 and gig0/1.20)
+
+3. Ensure PC addresses:
+	Both in VLAN 10 and VLAN 20 ensure that PCs are using correct IP address. If not confgiure them properly.
+
+4. Test the connectivity
+	Ping both the PCs with each other to make sure VLAN 10 and VLAN 20 are routing.
