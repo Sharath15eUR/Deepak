@@ -1,0 +1,90 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+WI-FI ASSIGNMENT 1
+
+
+1. In which OSI layer the Wi-Fi standard/protocol fits. 
+	Wi-Fi is at both Data Link Layer (Layer 2) and Physical Layer (Layer 1) in the OSI model. MAC addressing is handled by the Data Link Layer, while radio transmission is done by the Physical Layer.
+
+
+2. Can you share the Wi-Fi devices that you are using day to day life, share that device's wireless capability/properties after connecting to the network. Match your device to corresponding Wi-Fi Generations based on properties
+I use a smartphone (Wi-Fi 6, 802.11ax) with dual-band support (2.4 GHz and 5 GHz).
+My laptop has Wi-Fi 6e (IEEE 802.11ax).
+My Smart TV has Wi-Fi 4 (IEEE 802.11n).
+
+
+3. What is BSS and ESS?
+	BSS (Basic Service Set) refers to one Wi-Fi network created by a single access point and associated devices.
+	ESS (Extended Service Set) refers to multiple BSS linked together using the same SSID to enable seamless roaming within the network.
+
+
+4. What are the basic functionalities of Wi-Fi Access Point? 
+Enables wireless connection of devices.
+Wires and bridges wireless networks.
+Provides secure encryption and authentication via WPA/WPA2/WPA3.
+Supports multi-devices through MU-MIMO.
+
+
+5. Difference between Bridge mode and Repeater mode. 
+Bridge Mode: Links two independent networks together, enabling both sides' devices to communicate with each other.
+Repeater Mode: Expands the range of the Wi-Fi signal by transmitting and repeating it.
+
+
+6. What are the differences between 802.11a and 802.11b? 
+802.11a: Frequency is on 5 GHz and has a maximum speed of 54 Mbps. Less interference, but less range.
+802.11b: Works on 2.4 GHz band with a maximum speed of 11 Mbps. Interferes but has a wider range.
+
+
+7. Configure your modem/hotspot to operate only in 2.4GHz and connect your laptop/Wi-Fi device, and capture the capability/properties in your Wi-Fi device. Repeat the same in 5GHz and tabulate all the differences you observed during this.
+ 
+2.4 GHz
+Protocol: Wi-Fi 4 (802.11n)
+Security type: WPA2-Personal
+Manufacturer: Intel Corporation
+Description: Intel(R) Wi-Fi 6E AX211 160MHz
+Driver version:	23.60.1.2
+Network band: 2.4 GHz
+Network channel: 11
+Link speed (Receive/Transmit): 72/26 (Mbps)
+IPv6 address: 2409:40f4:2012:d98e:9d99:8b03:ee0d:88b7
+Link-local IPv6 address: fe80::ddb1:8490:9dfb:c4be%11
+IPv4 address: 192.168.5.204
+IPv4 DNS servers: 192.168.5.145 (Unencrypted)
+Physical address (MAC):	EC-8E-77-9B-FF-41
+
+
+5 GHz
+Protocol: Wi-Fi 5 (802.11ac)
+Security type: WPA2-Personal
+Manufacturer: Intel Corporation
+Description: Intel(R) Wi-Fi 6E AX211 160MHz
+Driver version:	23.60.1.2
+Network band: 5 GHz
+Network channel: 36
+Link speed (Receive/Transmit): 433/433 (Mbps)
+IPv6 address: 2409:40f4:2012:d98e:9d99:8b03:ee0d:88b7
+Link-local IPv6 address: fe80::ddb1:8490:9dfb:c4be%11
+IPv4 address: 192.168.5.204
+IPv4 DNS servers: 192.168.5.145 (Unencrypted)
+Physical address (MAC):	EC-8E-77-9B-FF-41
+
+When my wi-fi device is connected to hotspot on 2.4 GHz and 5 GHz configuration only Network band, Network channel and Link speed changes. All other properties remain same for both configuration
+
+
+
+8. What is the difference between IEEE and WFA? 
+IEEE (Institute of Electrical and Electronics Engineers) formulates technical standards, such as Wi-Fi standards like 802.11.
+WFA (Wi-Fi Alliance) tests for interoperability and assures conformity with Wi-Fi standards.
+
+
+9. List down the type of Wi-Fi internet connectivity backhaul, share your home/college's wireless internet connectivity backhaul name and its properties
+Fiber-Optic Backhaul: Offers low-latency high-speed internet.
+Wireless Backhaul: Operates using radio waves for interconnecting nodes in a mesh network.
+I have a Fiber-Optic Connection of up to 1 Gbps speed at home.
+
+
+10. List down the Wi-Fi topologies and use cases of each one.
+Infrastructure Mode: The devices are connected to a single access point, applied mostly in offices and homes.
+Ad-Hoc Mode: Device-to-device communication, lacking an access point, applied when networks are temporary or in case of emergencies.
+Mesh Topology: Many nodes forward data, providing complete coverage in big areas such as campuses or smart cities.
