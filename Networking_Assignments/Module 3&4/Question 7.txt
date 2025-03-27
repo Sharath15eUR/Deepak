@@ -1,0 +1,44 @@
+#Setting up a bridge and enabling it
+vboxuser@Ubunutu:~$ ip link show
+vboxuser@Ubunutu:~$ sudo ip link add name br0 type bridge
+vboxuser@Ubunutu:~$ sudo ip link set br0 up
+vboxuser@Ubunutu:~$ sudo ip link set dev enp0s8 master br0
+
+vboxuser@Ubuntu:~$ ping 192.168.1.10
+PING 192.168.1.10 (192.168.1.10) 56(84) bytes of data.
+64 bytes from 192.168.1.10: icmp_seq=1 ttl=128 time=1.18 ms
+64 bytes from 192.168.1.10: icmp_seq=2 ttl=128 time=0.985 ms
+64 bytes from 192.168.1.10: icmp_seq=3 ttl=128 time=0.887 ms
+64 bytes from 192.168.1.10: icmp_seq=4 ttl=128 time=0.994 ms
+64 bytes from 192.168.1.10: icmp_seq=5 ttl=128 time=0.841 ms
+64 bytes from 192.168.1.10: icmp_seq=6 ttl=128 time=0.697 ms
+64 bytes from 192.168.1.10: icmp_seq=7 ttl=128 time=0.709 ms
+^C
+--- 192.168.1.10 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6008ms
+rtt min/avg/max/mdev = 0.697/0.899/1.181/0.158 ms
+
+#To view MAC Address table using bridge comamnd
+vboxuser@Ubuntu:~$ sudo bridge fdb show
+[sudo] password for vboxuser: 
+01:00:5e:00:00:01 dev enp0s3 self permanent
+33:33:00:00:00:01 dev enp0s3 self permanent
+01:00:5e:00:00:fb dev enp0s3 self permanent
+33:33:ff:79:4d:cc dev enp0s3 self permanent
+33:33:ff:99:6b:94 dev enp0s3 self permanent
+33:33:ff:e6:34:22 dev enp0s3 self permanent
+33:33:00:00:00:fb dev enp0s3 self permanent
+01:00:5e:00:00:01 dev enp0s8 self permanent
+01:00:5e:00:00:01 dev enp0s8 vlan 1 master br0 permanent
+01:00:5e:00:00:01 dev enp0s8 master br0 permanent
+33:33:00:00:00:01 dev enp0s8 self permanent
+33:33:ff:2a:c6:1f dev enp0s8 self permanent
+01:00:5e:00:00:fb dev enp0s8 self permanent
+33:33:00:00:00:fb dev enp0s8 self permanent
+01:00:5e:00:00:01 dev enp0s9 self permanent
+33:33:00:00:00:01 dev enp0s9 self permanent
+33:33:ff:c0:2c:7d dev enp0s9 self permanent
+01:00:5e:00:00:fb dev enp0s9 self permanent
+33:33:ff:65:77:9a dev enp0s9 self permanent
+33:33:ff:c6:0c:4e dev enp0s9 self permanent
+33:33:00:00:00:fb dev enp0s9 self permanent

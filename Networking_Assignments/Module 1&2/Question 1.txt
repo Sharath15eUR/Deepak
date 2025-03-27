@@ -1,0 +1,45 @@
+UBUNTU (SSH Server)
+
+vboxuser@Ubuntu:~$ sudo systemctl start ssh
+vboxuser@Ubuntu:~$ sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>
+     Active: active (running) since Thu 2025-02-27 23:13:42 IST; 10min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+    Process: 3668 ExecStartPre=/usr/sbin/sshd -t (code=exited, status=0/SUCCESS)
+   Main PID: 3669 (sshd)
+      Tasks: 1 (limit: 2270)
+     Memory: 1.7M
+        CPU: 654ms
+     CGroup: /system.slice/ssh.service
+             └─3669 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Feb 27 23:13:42 Ubuntu sshd[3669]: Server listening on 0.0.0.0 port 22.
+Feb 27 23:13:42 Ubuntu sshd[3669]: Server listening on :: port 22.
+Feb 27 23:13:42 Ubuntu systemd[1]: Started OpenBSD Secure Shell server.
+Feb 27 23:13:55 Ubuntu sshd[3585]: Connection reset by invalid user vboxuser 19>
+Feb 27 23:14:00 Ubuntu sshd[3675]: Accepted password for vboxuser from 192.168.>
+Feb 27 23:14:00 Ubuntu sshd[3675]: pam_unix(sshd:session): session opened for u>
+Feb 27 23:20:30 Ubuntu sshd[3776]: Connection reset by authenticating user vbox>
+Feb 27 23:22:16 Ubuntu sshd[3883]: Accepted password for vboxuser from 192.168.>
+Feb 27 23:22:16 Ubuntu sshd[3883]: pam_unix(sshd:session): session opened for u>
+Feb 27 23:22:17 Ubuntu sshd[3883]: pam_unix(sshd:session): session closed for u>
+
+vboxuser@Ubuntu:~$ sudo systemctl stop ssh
+
+
+WINDOWS (file transfer from Ubunut using SCP)
+
+C:\Users\deepak>scp -r vboxuser@192.168.1.8:/home/vboxuser/myfolder C:\Users\deepak\Desktop\                
+vboxuser@192.168.1.8's password:                                                                                        
+scp: Connection closed                                                                                                                                                                                                                          
+
+C:\Users\deepak>scp-r vboxuser@192.168.1.8:/home/vboxuser/Backup C:\Users\deepak\Desktop\       
+vboxuser@192.168.1.8's password:
+task5.txt                                                                             100% 1185    16.5KB/s   00:00     
+task4.txt                                                                             100%   17KB 418.4KB/s   00:00     
+task1.txt                                                                             100%  452    36.8KB/s   00:00     
+output.txt                                                                            100%   20KB 757.7KB/s   00:00     
+task2.txt                                                                             100%  452    36.8KB/s   00:00     
+task3.txt                                                                             100%  517    31.6KB/s   00:00    

@@ -1,0 +1,17 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module3$ ./backup_manager.sh "./source" "./backup" ".txt"
+Backing up: file1.txt (2097152 bytes)
+Copied: file1.txt
+Backing up: file2.txt (2097152 bytes)
+Copied: file2.txt
+Backing up: file3.txt (2097152 bytes)
+Copied: file3.txt
+Backup finished! Report saved at: ./backup/backup_report.log
+
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module3$ cat backup/backup_report.log 
+Backup Summary:
+Total files backed up: 3
+Total size of files: 6291456 bytes
+Backup directory: ./backup
+
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module3$ ./backup_manager.sh "./empty_source" "./backup" ".txt"
+No files found with the extension .txt in ./empty_source

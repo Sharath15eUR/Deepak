@@ -1,0 +1,31 @@
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ sed 's/localhost/127.0.0.1/g' config.txt
+# Server Configuration
+server_name=127.0.0.1
+db_host=127.0.0.1
+db_port=3306
+admin_email=admin@127.0.0.1
+log_file=/var/log/127.0.0.1_app.log
+log_level=INFO
+app_mode=development
+cache_server=127.0.0.1
+redis_port=6379
+session_timeout=300
+auth_server=127.0.0.1
+auth_port=8080
+
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ sed 's/localhost/127.0.0.1/g' config.txt > updated_config.txt
+vboxuser@Ubuntu:~/Documents/Assignment/Linux_Training_Module2$ cat updated_config.txt
+# Server Configuration
+server_name=127.0.0.1
+db_host=127.0.0.1
+db_port=3306
+admin_email=admin@127.0.0.1
+log_file=/var/log/127.0.0.1_app.log
+log_level=INFO
+app_mode=development
+cache_server=127.0.0.1
+redis_port=6379
+session_timeout=300
+auth_server=127.0.0.1
+auth_port=8080
+

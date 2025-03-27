@@ -1,0 +1,13 @@
+Use of Sender’s IP in ARP (Address Resolution Protocol)
+In the ARP protocol, the sender's IP address is used for:
+1.Identifying the Source
+The sender’s IP address in an ARP request helps the receiver know who is asking for a MAC address.
+
+2. Updating ARP Cache
+When an ARP reply is received, the sender’s IP and MAC are stored in the receiver’s ARP table.
+
+3.Preventing Duplicate IPs
+ARP replies allow devices to detect conflicts if another device already has the same IP.
+
+4.Facilitating Two-Way Communication
+Once the MAC address is resolved using the sender’s IP, data packets can be sent back to the sender.

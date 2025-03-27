@@ -1,0 +1,87 @@
+SSH
+
+vboxuser@Ubuntu:~$ sudo systemctl start ssh
+[sudo] password for vboxuser: 
+vboxuser@Ubuntu:~$ sudo systemctl start ssh
+vboxuser@Ubuntu:~$ sudo systemctl status ssh
+● ssh.service - OpenBSD Secure Shell server
+     Loaded: loaded (/lib/systemd/system/ssh.service; enabled; vendor preset: e>
+     Active: active (running) since Thu 2025-02-27 23:13:42 IST; 1h 49min ago
+       Docs: man:sshd(8)
+             man:sshd_config(5)
+   Main PID: 3669 (sshd)
+      Tasks: 1 (limit: 2270)
+     Memory: 284.0K
+        CPU: 1.229s
+     CGroup: /system.slice/ssh.service
+             └─3669 "sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups"
+
+Feb 27 23:13:42 Ubuntu systemd[1]: Started OpenBSD Secure Shell server.
+Feb 27 23:13:55 Ubuntu sshd[3585]: Connection reset by invalid user vboxuser 19>
+Feb 27 23:14:00 Ubuntu sshd[3675]: Accepted password for vboxuser from 192.168.>
+Feb 27 23:14:00 Ubuntu sshd[3675]: pam_unix(sshd:session): session opened for u>
+Feb 27 23:20:30 Ubuntu sshd[3776]: Connection reset by authenticating user vbox>
+Feb 27 23:22:16 Ubuntu sshd[3883]: Accepted password for vboxuser from 192.168.>
+Feb 27 23:22:16 Ubuntu sshd[3883]: pam_unix(sshd:session): session opened for u>
+Feb 27 23:22:17 Ubuntu sshd[3883]: pam_unix(sshd:session): session closed for u>
+Feb 27 23:26:11 Ubuntu sshd[4098]: Accepted password for vboxuser from 192.168.>
+Feb 27 23:26:11 Ubuntu sshd[4098]: pam_unix(sshd:session): session opened for u>
+lines 1-22/22 (END)
+vboxuser@Ubuntu:~$ 
+
+USING SSH TO ACCESS REMOTE SYSTEM
+
+C:\Users\deepak>ssh vboxuser@192.168.1.8                                                                         
+vboxuser@192.168.1.8's password:                                                                                       
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-51-generic x86_64)  
+
+Last login: Thu Feb 27 23:14:01 2025 from 192.168.1.4                                                                   
+vboxuser@Ubuntu:~$ ls                                                                                                   
+Backup  Desktop  Documents  Downloads  first  Music  Pictures  Public  snap  Templates  transfer  Videos                
+vboxuser@Ubuntu:~$ cd Documents/                                                                                        
+vboxuser@Ubuntu:~/Documents$ ls                                                                                         
+Assignment                                                                                                              
+vboxuser@Ubuntu:~/Documents$ cd Assignment/                                                                             
+vboxuser@Ubuntu:~/Documents/Assignment$ ls                                                                              
+Linux_Training_Module1  Linux_Training_Module2  Linux_Training_Module3  Linux_Training_Module4  Linux_Training_Module5  
+vboxuser@Ubuntu:~/Documents/Assignment$ exit                                                                            
+logout                                                                                                                  
+Connection to 192.168.1.8 closed.
+
+
+
+TELNET
+
+TELNET SERVER (Ubuntu)
+vboxuser@Ubuntu:~$ sudo apt install xinetd telnetd
+vboxuser@Ubuntu:~$ sudo systemctl start xinetd
+[sudo] password for vboxuser: 
+vboxuser@Ubuntu:~$ sudo systemctl status xinetd
+vboxuser@Ubuntu:~$ sudo systemctl stop xinetd
+
+
+Accesing the remote system using TELNET
+C:\Users\deepak>telnet 192.168.1.8    
+Ubuntu 22.04.5 LTS                                                                                                      
+Ubuntu login: vboxuser                                                                                                  
+Password:                                                                                                               
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 6.8.0-51-generic x86_64)                                                                                                                                                                                
+	* Documentation:  https://help.ubuntu.com                                                                               
+	* Management:     https://landscape.canonical.com                                                                       
+	* Support:        https://ubuntu.com/pro                                                                                                                                                                                                       
+	Expanded Security Maintenance for Applications is not enabled.                                                                                                                                                                                 
+	 0 updates can be applied immediately.                                                                                                                                                                                                           
+	Enable ESM Apps to receive additional future security updates.                                                          
+	See https://ubuntu.com/esm or run: sudo pro status                                                                                                                                                                                              
+	New release '24.04.2 LTS' available.                                                                                    
+	Run 'do-release-upgrade' to upgrade to it.                                                                                                                                                                                                      
+	*** System restart required ***                                                                                         
+	Last login: Fri Feb 28 01:04:17 IST 2025 from 192.168.1.4 on pts/2                                                     
+vboxuser@Ubuntu:~$ pwd                                                                                                 
+ /home/vboxuser                                                                                                          
+vboxuser@Ubuntu:~$ ls                                                                                                   
+Backup  Desktop  Documents  Downloads  first  Music  Pictures  Public  snap  Templates  transfer  Videos                
+vboxuser@Ubuntu:~$ cd Documents/Assignment/                                                                             
+vboxuser@Ubuntu:~/Documents/Assignment$ ls                                                                              
+Linux_Training_Module1  Linux_Training_Module2  Linux_Training_Module3  Linux_Training_Module4  Linux_Training_Module5  
+vboxuser@Ubuntu:~/Documents/Assignment$  

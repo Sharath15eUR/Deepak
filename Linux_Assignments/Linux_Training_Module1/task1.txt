@@ -1,0 +1,6 @@
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ touch file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l file1
+-rw-rw-r-- 1 vboxuser vboxuser 0 Jan 23 00:08 file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ chmod a+x file1
+vboxuser@Ubuntu:~/Documents/Assignment/DeepakRajD_Linux_Training_Module1$ ls -l file1
+-rwxrwxr-x 1 vboxuser vboxuser 0 Jan 23 00:08 file1

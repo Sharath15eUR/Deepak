@@ -1,0 +1,191 @@
+FTP
+
+C:\Users\deepakl>ping 172.17.31.177
+
+Pinging 172.17.31.177 with 32 bytes of data:
+Reply from 172.17.31.177: bytes=32 time=174ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=202ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=38ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=19ms TTL=64
+
+Ping statistics for 172.17.31.177:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 19ms, Maximum = 202ms, Average = 108ms
+
+C:\Users\deepak>ftp 172.17.31.177
+Connected to 172.17.31.177.
+220 (vsFTPd 3.0.5)
+200 Always in UTF8 mode.
+User (172.17.31.177:(none)): ftpuser
+331 Please specify the password.
+Password:
+
+500 OOPS: vsftpd: refusing to run with writable root inside chroot()
+500 OOPS: priv_sock_get_cmdConnection closed by remote host.
+
+C:\Users\deepak>ftp 172.17.31.177
+Connected to 172.17.31.177.
+220 (vsFTPd 3.0.5)
+200 Always in UTF8 mode.
+User (172.17.31.177:(none)): ftpuser
+331 Please specify the password.
+Password:
+
+230 Login successful.
+ftp> pwd
+257 "/" is the current directory
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> sudo mkdir -p /home/ftpuser/ftp
+Invalid command.
+ftp> ls -l
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> sudo mkdir -p /home/ftpuser/ftp
+Invalid command.
+ftp> su -c "apt install sudo"
+Invalid command.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+ftp
+226 Directory send OK.
+ftp: 8 bytes received in 0.00Seconds 8000.00Kbytes/sec.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+ftp
+sample
+226 Directory send OK.
+ftp: 16 bytes received in 0.00Seconds 16.00Kbytes/sec.
+ftp> put C:\Users\Deepak\OneDrive\Documents\EmbedUR experience.docx
+C:\Users\Deepak\OneDrive\Documents\EmbedUR: File not found
+ftp> put "C:\Users\Deepak\OneDrive\Documents\EmbedUR experience.docx"
+200 PORT command successful. Consider using PASV.
+150 Ok to send data.
+226 Transfer complete.
+ftp: 102898 bytes sent in 0.08Seconds 1286.22Kbytes/sec.
+ftp> ls
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+EmbedUR experience.docx
+ftp
+sample
+226 Directory send OK.
+ftp: 41 bytes received in 0.00Seconds 41.00Kbytes/sec.
+ftp> get test.txt
+421 Timeout.
+Connection closed by remote host.
+ftp> ls -l
+Not connected.
+ftp> ftp 172.17.31.177
+Invalid command.
+ftp> ftp> bye
+
+C:\Users\deepak>ftp 172.17.31.177
+Connected to 172.17.31.177.
+220 (vsFTPd 3.0.5)
+200 Always in UTF8 mode.
+User (172.17.31.177:(none)): ftpuser
+331 Please specify the password.
+Password:
+
+230 Login successful.
+ftp> get test.txt
+200 PORT command successful. Consider using PASV.
+150 Opening BINARY mode data connection for test.txt (0 bytes).
+226 Transfer complete.
+ftp> lcd
+Local directory now C:\Users\DHARUN.
+ftp> bye
+
+
+
+
+
+SFTP
+
+C:\Users\deepak>sftp 172.17.31.177
+
+C:\Users\deepak>sftp vboxuser@172.17.31.177
+ssh: connect to host 172.17.31.177 port 22: Connection timed out
+Connection closed
+
+C:\Users\deepak>ping 172.17.31.177
+
+Pinging 172.17.31.177 with 32 bytes of data:
+Reply from 172.17.31.177: bytes=32 time=50ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=58ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=117ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=90ms TTL=64
+
+Ping statistics for 172.17.31.177:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 50ms, Maximum = 117ms, Average = 78ms
+
+C:\Users\deepak>sftp vboxuser@172.17.31.177
+ssh: connect to host 172.17.31.177 port 22: Connection timed out
+
+C:\Users\deepak>ping 172.17.31.177
+
+Pinging 172.17.31.177 with 32 bytes of data:
+Reply from 172.17.31.177: bytes=32 time=51ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=65ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=120ms TTL=64
+Reply from 172.17.31.177: bytes=32 time=86ms TTL=64
+
+Ping statistics for 172.17.31.177:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 51ms, Maximum = 120ms, Average = 80ms
+
+C:\Users\deepak>sftp vboxuser@172.17.31.177
+The authenticity of host '172.17.31.177 (172.17.31.177)' can't be established.
+ED25519 key fingerprint is SHA256:aCJPnCcZrNrUrZMuULR52BGwusohpZuuea2IaeuCqQM.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])?
+Please type 'yes', 'no' or the fingerprint:
+Please type 'yes', 'no' or the fingerprint:
+Warning: Permanently added '172.17.31.177' (ED25519) to the list of known hosts.
+vboxuser@172.17.31.177's password:
+Permission denied, please try again.
+vboxuser@172.17.31.177's password:
+Permission denied, please try again.
+vboxuser@172.17.31.177's password:
+Connection closed
+
+C:\Users\deepak>sftp vboxuser@172.17.31.177
+vboxuser@172.17.31.177's password:
+Connection closed
+
+C:\Users\deepak>sftp ftpuser@172.17.31.177
+ftpuser@172.17.31.177's password:
+Connected to 172.17.31.177.
+sftp> ls
+EmbedUR experience.docx       ftp                           sample                        snap
+
+test.txt
+sftp> put "C:\Users\deepak\Downloads\sftp_test.txt"
+Uploading C:/Users/deepak/Downloads/sftp_test.txt to /home/ftpuser/sftp_test.txt
+sftp_test.txt                                                                         100%   21     1.9KB/s   00:00
+sftp> get sftp_test#.txt
+File "/home/ftpuser/sftp_test" not found.
+sftp> get "sftp_test#.txt"
+Fetching /home/ftpuser/sftp_test#.txt to sftp_test#.txt
+sftp> ls
+EmbedUR experience.docx       ftp                           sample                        sftp_test#.txt
+
+sftp_test.txt                 snap                          test.txt
+sftp> get sftp_test#.txt
+File "/home/ftpuser/sftp_test" not found.
+sftp> lcd
+sftp> bye

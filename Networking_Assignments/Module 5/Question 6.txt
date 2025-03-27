@@ -1,0 +1,20 @@
+Name : Deepak Raj D
+
+1. IP Address: 10.1.1.1
+Class: A
+Default Subnet Mask: 255.0.0.0
+Range of Class A: 10.0.0.0 – 10.255.255.255 (This IP address range)
+Class A IP Address Range: 1.0.0.0 – 126.255.255.255
+(127.x.x.x is reserved for loopback addresses)
+
+2. IP Address: 172.16.5.10
+Class: B
+Default Subnet Mask: 255.255.0.0
+Range of Class B: 172.16.0.0 – 172.31.255.255
+Class B IP Address Range: 128.0.0.0 – 191.255.255.255
+
+3. IP Address: 192.168.1.5
+Class: C
+Default Subnet Mask: 255.255.255.0
+Range of Class C : 192.168.1.0 – 192.168.1.255
+Class C IP Address Range: 192.0.0.0 – 223.255.255.255

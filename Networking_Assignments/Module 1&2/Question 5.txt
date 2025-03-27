@@ -1,0 +1,10 @@
+What happens when duplicate IPs are configured in a network?
+
+IP Conflict Error 
+Both devices with the same IP cannot communicate properly, causing one or both systems to lose network connectivity.
+
+MAC Address Flapping 
+The switch will receive the same IP with two different MAC addresses, confusing the network and flooding packets across all ports.
+
+Address Resolution Protocol (ARP Issues)
+When two devices with same IP then both devices will keep replying to ARP Requests with different MAC addresses.The Switch or Router will keep updating its ARP table repeatedly.

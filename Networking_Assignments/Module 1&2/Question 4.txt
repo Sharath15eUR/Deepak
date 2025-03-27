@@ -1,0 +1,58 @@
+PING,IFCONFIG,ARP Commands
+
+vboxuser@Ubuntu:~$ ping 192.168.1.1
+PING 192.168.1.1 (192.168.1.1) 56(84) bytes of data.
+64 bytes from 192.168.1.1: icmp_seq=1 ttl=64 time=4.45 ms
+64 bytes from 192.168.1.1: icmp_seq=2 ttl=64 time=4.12 ms
+64 bytes from 192.168.1.1: icmp_seq=3 ttl=64 time=4.58 ms
+64 bytes from 192.168.1.1: icmp_seq=4 ttl=64 time=4.68 ms
+64 bytes from 192.168.1.1: icmp_seq=5 ttl=64 time=4.80 ms
+64 bytes from 192.168.1.1: icmp_seq=6 ttl=64 time=4.26 ms
+64 bytes from 192.168.1.1: icmp_seq=7 ttl=64 time=4.78 ms
+64 bytes from 192.168.1.1: icmp_seq=8 ttl=64 time=4.43 ms
+^C
+--- 192.168.1.1 ping statistics ---
+8 packets transmitted, 8 received, 0% packet loss, time 7012ms
+rtt min/avg/max/mdev = 4.124/4.513/4.799/0.226 ms
+
+
+C:\Users\deepak>arp-a                                                                                                                                                                                                                    
+Interface: 192.168.56.1 --- 0xa                                                                                           
+	Internet Address      Physical Address      Type                                                                        
+	192.168.56.255        ff-ff-ff-ff-ff-ff     static                                                                      
+	224.0.0.2             01-00-5e-00-00-02     static                                                                      
+	224.0.0.22            01-00-5e-00-00-16     static                                                                      
+	224.0.0.251           01-00-5e-00-00-fb     static                                                                      
+	224.0.0.252           01-00-5e-00-00-fc     static                                                                      
+	239.255.255.250       01-00-5e-7f-ff-fa     static                                                                                                                                                                                            
+Interface: 192.168.1.4 --- 0xe                                                                                            
+	Internet Address      Physical Address      Type                                                                        
+	192.168.1.1           4c-ae-1c-ad-18-d1     dynamic                                                                     
+	192.168.1.6           44-cb-8b-22-74-f0     dynamic                                                                     
+	192.168.1.8           08-00-27-2f-e9-66     dynamic                                                                     
+	192.168.1.255         ff-ff-ff-ff-ff-ff     static                                                                      
+	224.0.0.2             01-00-5e-00-00-02     static      
+
+
+vboxuser@Ubuntu:~$ ifconfig
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 192.168.1.8  netmask 255.255.255.0  broadcast 192.168.1.255
+        inet6 fe80::c4d8:2cdd:1b79:4dcc  prefixlen 64  scopeid 0x20<link>
+        inet6 2001:4490:4e81:7ad9:4054:b16f:57be:3ea9  prefixlen 64  scopeid 0x0<global>
+        inet6 2001:4490:4e81:7ad9:1ee9:2734:3079:8bda  prefixlen 64  scopeid 0x0<global>
+        ether 08:00:27:2f:e9:66  txqueuelen 1000  (Ethernet)
+        RX packets 772162  bytes 1133349939 (1.1 GB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 98674  bytes 6907785 (6.9 MB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 300  bytes 37801 (37.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 300  bytes 37801 (37.8 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+

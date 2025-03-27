@@ -1,0 +1,11 @@
+Name : Deepak Raj D
+
+Short description about Linux kernel's handling of Ethernet devices and network interfaces 
+
+Ethernet devices in Linux are represented as network interfaces (e.g., eth0, enp0s8) managed by the kernel. 
+The kernel interacts with Ethernet hardware using network drivers that follow the netdev framework. 
+Packet transmission and reception are handled via the kernel's networking stack, which processes data through layers like IP and TCP/UDP.
+The kernel assigns a unique MAC address to each Ethernet interface, enabling device identification on a network.
+IP configuration (static/DHCP) is managed through kernel networking utilities like ip and ifconfig.
+The kernel maintains an ARP (Address Resolution Protocol) table to map IP addresses to MAC addresses for efficient packet forwarding.
+The kernel's routing table determines how packets are forwarded based on destination addresses and defined routes.

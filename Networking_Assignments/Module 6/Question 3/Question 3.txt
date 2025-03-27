@@ -1,0 +1,16 @@
+The given network: 10.0.0.0/24
+
+Default subnet mask: 255.255.255.0
+
+We need 4 subnets so each subnet will be having 64 IP addresses. So Subnet generator is 64.
+
+New Subnet mask is 255.255.255.192/26
+
+
+SUBNET		Netowrk Address		Usable IPs			Broadcast Address
+Subnet 1		10.0.0.0/26		10.0.0.1 - 10.0.0.62		10.0.0.63
+Subnet 2		10.0.0.64/26		10.0.0.65 - 10.0.0.126		10.0.0.127
+Subnet 3		10.0.0.128/26		10.0.0.129 - 10.0.0.190		10.0.0.191
+Subnet 4		10.0.0.192/26		10.0.0.193 - 10.0.0.254		10.0.0.255
+
+ 

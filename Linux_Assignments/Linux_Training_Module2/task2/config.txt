@@ -1,0 +1,14 @@
+# Server Configuration
+server_name=localhost
+db_host=localhost
+db_port=3306
+admin_email=admin@localhost
+log_file=/var/log/localhost_app.log
+log_level=INFO
+app_mode=development
+cache_server=localhost
+redis_port=6379
+session_timeout=300
+auth_server=localhost
+auth_port=8080
+

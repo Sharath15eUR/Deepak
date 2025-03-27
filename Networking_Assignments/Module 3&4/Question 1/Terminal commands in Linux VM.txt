@@ -1,0 +1,81 @@
+vboxuser@Ubuntu:~$ ip a
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:2f:e9:66 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 brd 10.0.2.255 scope global dynamic noprefixroute enp0s3
+       valid_lft 85343sec preferred_lft 85343sec
+    inet6 fd00::6586:9d74:c8e6:3422/64 scope global temporary dynamic 
+       valid_lft 86155sec preferred_lft 14155sec
+    inet6 fd00::5aca:769e:e899:6b94/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86155sec preferred_lft 14155sec
+    inet6 fe80::c4d8:2cdd:1b79:4dcc/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:2a:c6:1f brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.2/24 brd 192.168.56.255 scope global noprefixroute enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:fe2a:c61f/64 scope link 
+       valid_lft forever preferred_lft forever
+4: enp0s9: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:b4:58:57 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.1.7/24 brd 192.168.1.255 scope global dynamic noprefixroute enp0s9
+       valid_lft 85343sec preferred_lft 85343sec
+    inet6 2001:4490:4e81:f5e0:59a1:cf84:3c6:c4e/64 scope global temporary dynamic 
+       valid_lft 603746sec preferred_lft 85184sec
+    inet6 2001:4490:4e81:f5e0:df4b:11a7:5265:779a/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 2570588sec preferred_lft 583388sec
+    inet6 fe80::856d:b92a:9ec0:2c7d/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever
+
+
+GENERATING NETWORK TRAFFIC (By pinging windows from linux)
+
+vboxuser@Ubuntu:~$ ping 192.168.56.1
+PING 192.168.56.1 (192.168.56.1) 56(84) bytes of data.
+64 bytes from 192.168.56.1: icmp_seq=1 ttl=128 time=2.56 ms
+64 bytes from 192.168.56.1: icmp_seq=2 ttl=128 time=0.833 ms
+64 bytes from 192.168.56.1: icmp_seq=3 ttl=128 time=0.912 ms
+64 bytes from 192.168.56.1: icmp_seq=4 ttl=128 time=1.18 ms
+64 bytes from 192.168.56.1: icmp_seq=5 ttl=128 time=0.983 ms
+64 bytes from 192.168.56.1: icmp_seq=6 ttl=128 time=1.26 ms
+64 bytes from 192.168.56.1: icmp_seq=7 ttl=128 time=1.16 ms
+^C
+--- 192.168.56.1 ping statistics ---
+7 packets transmitted, 7 received, 0% packet loss, time 6017ms
+rtt min/avg/max/mdev = 0.833/1.270/2.558/0.545 ms
+vboxuser@Ubuntu:~$ 
+
+
+
+PACKETS ARE CAPTURED IN WIRESHARK (To analyze ethernet frames and MAC Addressing)
+
+
+
+TO VIEW MAC ADDRESS TABLE IN LINUX (similar to MAC Address table of a Switch in physical network)
+vboxuser@Ubuntu:~$ sudo bridge fdb show
+[sudo] password for vboxuser: 
+01:00:5e:00:00:01 dev enp0s3 self permanent
+33:33:00:00:00:01 dev enp0s3 self permanent
+01:00:5e:00:00:fb dev enp0s3 self permanent
+33:33:ff:79:4d:cc dev enp0s3 self permanent
+33:33:ff:99:6b:94 dev enp0s3 self permanent
+33:33:ff:e6:34:22 dev enp0s3 self permanent
+33:33:00:00:00:fb dev enp0s3 self permanent
+01:00:5e:00:00:01 dev enp0s8 self permanent
+33:33:00:00:00:01 dev enp0s8 self permanent
+33:33:ff:2a:c6:1f dev enp0s8 self permanent
+01:00:5e:00:00:fb dev enp0s8 self permanent
+33:33:00:00:00:fb dev enp0s8 self permanent
+01:00:5e:00:00:01 dev enp0s9 self permanent
+33:33:00:00:00:01 dev enp0s9 self permanent
+33:33:ff:c0:2c:7d dev enp0s9 self permanent
+01:00:5e:00:00:fb dev enp0s9 self permanent
+33:33:ff:65:77:9a dev enp0s9 self permanent
+33:33:ff:c6:0c:4e dev enp0s9 self permanent
+33:33:00:00:00:fb dev enp0s9 self permanent
+

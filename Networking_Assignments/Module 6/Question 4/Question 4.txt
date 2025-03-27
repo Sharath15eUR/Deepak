@@ -1,0 +1,19 @@
+Name : Deepak Raj D
+
+1. IP Address: 192.168.10.5
+Class: C
+Default Subnet Mask: 255.0.0.0
+Class C IP Address Range: 192.0.0.0 – 223.255.255.255
+Private/Public: Private (192.x.x.x is reserved for private networks)
+
+2. IP Address: 172.16.5.10
+Class: B
+Default Subnet Mask: 255.255.0.0
+Private/Public: Range of 172.16.0.0 – 172.31.255.255 is private
+
+
+3. IP Address: 8.8.8.8
+Class: A
+Default Subnet Mask: 255.255.255.0
+Class A IP Address Range: 1.0.0.0 – 126.255.255.255
+Private/Public: Public (Google's DNS server)
