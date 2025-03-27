@@ -1,0 +1,15 @@
+1. In which OSL layer the Wi-Fi standard/protocol fits.
+
+The Wi-Fi standard (IEEE 802.11) operates at the Data Link Layer in the MAC sublayer, and
+the Physical Layer.
+
+Physical Layer:
+• It defines the actual wireless transmission, including frequency bands,
+modulation techniques, and signal encoding.
+• It defines which frequency band to use such as 2.4 GHz , 5GHz.
+• It is responsible for converting digital signals to Wifi signals.
+
+Data Link Layer:
+• This layer is used to identify the MAC address of the device we are trying to connect.
+• Wifi operates in the MAC sublayer that consists of frame control, Error detection and
+correction.

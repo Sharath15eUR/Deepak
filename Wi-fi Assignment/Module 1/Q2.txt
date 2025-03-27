@@ -1,0 +1,35 @@
+2. Can you share the Wi-Fi devices that you are using day to day life, share that device's wireless capability/properties after connecting to the network. Match your device to corresponding Wi-Fi Generations based on properties
+
+Wi-fi Devices:
+Smartphone
+Laptop
+Smart TV
+
+My laptop has Wi-Fi 6e (IEEE 802.11ax)
+
+WI-FI Properties in my Laptop :
+C:\Users\Deepak>netsh wlan show interfaces
+
+There is 1 interface on the system:
+
+    Name                   : Wi-Fi
+    Description            : Realtek RTL8852BE WiFi 6 802.11ax PCIe Adapter
+    GUID                   : ecb59110-6de9-40db-9130-432cf6f76f50
+    Physical address       : 58:cd:c9:ba:e5:17
+    Interface type         : Primary
+    State                  : connected
+    SSID                   : KARTHIKA
+    BSSID                  : 4c:ae:1c:ad:18:d1
+    Network type           : Infrastructure
+    Radio type             : 802.11n
+    Authentication         : WPA2-Personal
+    Cipher                 : CCMP
+    Connection mode        : Auto Connect
+    Band                   : 2.4 GHz
+    Channel                : 8
+    Receive rate (Mbps)    : 300
+    Transmit rate (Mbps)   : 300
+    Signal                 : 90%
+    Profile                : KARTHIKA
+
+    Hosted network status  : Not available

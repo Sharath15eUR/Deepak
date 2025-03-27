@@ -1,0 +1,33 @@
+Q10. List down the Wi-Fi topologies and use cases of each one.
+
+1. Infrastructure Mode
+Devices connect to a central access point (AP) that provides network and internet connectivity.
+Use Case: Home and office networks, public Wi-Fi hotspots, and SMBs using a central AP to provide coverage.
+
+2. Ad-Hoc Mode
+Devices connect directly to each other without the need for a central access point.
+Use Case: Temporary file sharing, local gaming, and peer-to-peer communication without an internet connection.
+
+3. Mesh Network
+Multiple access points wirelessly connect with each other to extend coverage and provide redundancy.
+Use Case: Large homes, campuses, and offices needing seamless coverage across multiple rooms or floors.
+
+4. Repeater Mode
+A device extends the Wi-Fi network’s range by repeating the signal from the main router/AP.
+Use Case: Extending Wi-Fi coverage to areas with weak signals or larger properties.
+
+5. Bridge Mode
+Two networks are connected wirelessly, where one AP bridges the gap between two separate network segments.
+Use Case: Connecting two buildings or distant rooms without laying cables.
+
+6. Client Mode
+A Wi-Fi device connects to a network as a client without providing internet access to other devices.
+Use Case: Connecting devices like printers or PCs to a Wi-Fi network in places where Ethernet cables aren't possible.
+
+7. Point-to-Point (PtP) Mode
+Two access points communicate directly over a wireless link to form a dedicated connection between two points.
+Use Case: Connecting two distant buildings or locations in a campus or business environment.
+
+8. Point-to-Multipoint (PtMP) Mode
+One central access point communicates wirelessly with multiple remote stations or nodes.
+Use Case: Providing internet or network access to several remote locations, like in rural broadband deployment.

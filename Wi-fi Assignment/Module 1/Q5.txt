@@ -1,0 +1,22 @@
+Q5.Difference between Bridge mode and Repeater mode. 
+
+
+1. Purpose:
+Bridge Mode: Joins two networks (wired or wireless) to form a larger network without extra routers.
+Repeater Mode: Expands the coverage of an existing Wi-Fi network by boosting and repeating the signal.
+
+2. Network Configuration:
+Bridge Mode: Joins two separate networks, using the same subnet and no reduction in speed.
+Repeater Mode: Joins wirelessly to an existing network and repeats the signal, possibly reducing speed.
+
+3. Speed:
+Bridge Mode: No speed reduction, since devices are connected directly.
+Repeater Mode: Speed reduction because of repeated signal and added hops.
+
+4. Setup Complexity:
+Bridge Mode: More complex setup and network configuration.
+Repeater Mode: Simple to set up, often just plugging into the existing Wi-Fi.
+
+5. Usage:
+Bridge Mode: Utilized to connect two isolated networks or extend a network across vast distances (e.g., two buildings).
+Repeater Mode: Employed for extending Wi-Fi coverage in an individual space such as a huge home or workplace.

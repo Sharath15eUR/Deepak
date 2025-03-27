@@ -1,0 +1,25 @@
+3. What is BSS and ESS?
+
+BSS (Basic Service Set):
+
+A Basic Service Set is the fundamental building block of a Wi-Fi network, consisting of a single access point (AP) and the devices connected to it.
+Each BSS is identified by a BSSID (usually the MAC address of the access point).
+The range of a BSS is limited to the coverage area of the single access point.
+Devices in a BSS communicate through the central access point. No communication occurs directly between devices in the same BSS unless via the AP.
+
+Types of BSS : Can operate in Infrastructure Mode (with an AP) or IBSS (Ad-Hoc Mode) where devices communicate directly without an AP.
+
+Usage: Suitable for small or single-location networks, like a home or small office network.
+
+
+ESS (Extended Service Set):
+
+An Extended Service Set consists of multiple BSSs (access points) that are connected and operate under the same SSID to cover a larger area.
+All BSSs in an ESS share the same SSID, making the network seamless across the coverage area.
+The range of an ESS is extended beyond a single access point, covering a larger area, such as a building or campus.
+Devices can roam between different BSSs/APs within the ESS without losing connectivity.
+When moving across APs in the ESS, devices automatically hand off to the AP with the strongest signal.
+
+Type: Used in larger networks (e.g., office buildings, campuses) where multiple access points are needed to provide coverage.
+
+

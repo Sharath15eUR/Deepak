@@ -1,0 +1,22 @@
+Q6. What are the differences between 802.11a and 802.11b? 
+
+
+1. Frequency Band:
+802.11a: Works in the 5 GHz frequency band.
+802.11b: Works in the 2.4 GHz frequency band.
+
+2. Data Transfer Speed:
+802.11a: A maximum data rate of 54 Mbps.
+802.11b: A maximum data rate of 11 Mbps.
+
+3. Range:
+802.11a: Shorter range because of the 5 GHz frequency, which penetrates walls and obstructions less effectively.
+802.11b: Longer range because the 2.4 GHz frequency has a longer range and can penetrate obstacles more effectively.
+
+4. Interference:
+802.11a: Less susceptible to interference because the 5 GHz band is less crowded than 2.4 GHz.
+802.11b: More susceptible to interference because numerous other devices (such as microwaves, Bluetooth, and cordless phones) also operate on the 2.4 GHz band.
+
+5. Compatibility:
+802.11a: Not compatible with 802.11b devices because they operate on different frequency bands.
+802.11b: May be used with existing devices but slower than 802.11a.

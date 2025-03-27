@@ -1,0 +1,19 @@
+Q4. What are the basic functionalities of Wi-Fi Access Point? 
+
+
+1. Wireless Connectivity:
+The basic role of an AP is to offer wireless access to the network by making devices (laptops, mobiles, tablets, etc.) able to access the local network using Wi-Fi. It plays the role of connecting the wireless devices and the wired network.
+
+2. Data Transmission and Reception:
+An AP forwards and accepts information between the network and the wireless devices connected. It interprets the information from the wireless signals to the wired network's language (and vice versa).
+
+3. Network Management:
+Channel Selection: The AP controls the Wi-Fi channels where devices will talk in order not to be affected by other existing networks in the vicinity.
+Security: APs manage security policies such as WPA2/WPA3, encryption, and authentication to allow only approved devices to join the network. APs can control security options such as password protection or MAC address filtering.
+
+4. Bandwidth Management:
+APs assist in managing bandwidth efficiently to devices on the network to ensure that the network is capable of maintaining the necessary traffic. Some APs include capabilities such as QoS (Quality of Service) to provide higher priority to important network traffic such as video calls or games.
+
+5. Roaming Support:
+In larger networks with several APs, one AP provides roaming between access points. This enables devices to switch from one AP to another without losing the connection as they move around the coverage area (in Extended Service Set (ESS) configurations).
+
