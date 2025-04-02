@@ -1,0 +1,35 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+CAPWAP operates at multiple layers of the OSI model:
+
+Layer 2 (Data Link Layer)
+-Used for AP-WLC communication when operating on the same subnet (rare case).
+
+Layer 3 (Network Layer)
+-CAPWAP typically runs over UDP (IPv4/IPv6) and supports AP-WLC communication across different subnets.
+
+Layer 4 (Transport Layer)
+-Uses UDP ports 5246 (Control Tunnel) and 5247 (Data Tunnel) for communication.
+
+Layer 7 (Application Layer)
+-WLC manages AP configuration, policy enforcement, and data processing.
+
+
+CAPWAP operates using two logical channels:
+
+1.Control Tunnel
+
+UDP port - UDP 5246
+
+-Used for management traffic (AP-WLC communication, configuration, authentication). Encrypted for security.
+-Handles AP discovery, authentication, configuration, and firmware updates.
+-Encrypted using DTLS (Datagram Transport Layer Security).
+
+2.Data Tunnel
+
+UDP port - UDP 5247
+
+-Used for transmitting user data (packets from clients to the network). May or may not be encrypted.
+-Can either be centrally forwarded to WLC (Tunnel Mode) or locally switched (FlexConnect Mode).
+-Optional Encryption, based on configuration.

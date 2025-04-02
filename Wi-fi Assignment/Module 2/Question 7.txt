@@ -1,0 +1,14 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+When a WLC (Wireless LAN Controller) is deployed over a WAN, the best AP mode to use for local network connectivity is FlexConnect Mode (also known as Hybrid Mode)
+
+FlexConnect allows the Access Point (AP) to continue functioning even if the WLC is unreachable due to WAN failures. This mode enables local switching, meaning that client traffic does not have to be tunneled back to the WLC over the WAN, reducing latency and improving performance.
+
+Advantages of FlexConnect Mode:
+
+-Local switching: Client traffic stays in the local network instead of routing through WLC.
+-Survivability: APs keep working and clients stay connected even if WAN connectivity to the WLC is lost.
+-Efficient Bandwidth Usage: Reduces WAN congestion since traffic does not need to be backhauled to the WLC.
+-Supports VLAN-based SSID Mapping: Can switch specific SSIDs locally while others are centrally forwarded.
+-Remote Site Redundancy: APs retain authentication and security settings when WLC is unavailable.

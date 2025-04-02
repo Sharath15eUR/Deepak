@@ -1,0 +1,27 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+When a Lightweight AP (LWAP) operating in Local Mode loses connection to the WLC (Wireless LAN Controller), it stops serving clients because it depends on the controller for management and traffic forwarding.
+
+1.AP-Controller Connection Loss Detection
+-The AP continuously sends heartbeat messages (CAPWAP Keep-Alive) to the WLC.
+-If the AP does not receive a response within the timeout period, it considers the WLC down.
+
+2.Client Disconnection
+-Since Local Mode APs tunnel all traffic to the WLC, they cannot function independently.
+-The AP disconnects all associated clients and stops broadcasting SSIDs.
+-Wireless users lose connectivity until the WLC is restored or an alternative controller is available.
+
+3.AP Reboot & Discovery Process
+-The AP automatically reboots and tries to find a new WLC.
+-It attempts discovery using:
+	Pre-configured WLC IP (if set).
+	DHCP Option 43 (if configured).
+	DNS Resolution (CISCO-CAPWAP-CONTROLLER.local).
+
+4.Failover Scenarios
+-If a Secondary WLC is Available:
+	The AP registers with the backup WLC and resumes normal operation.
+-If No WLC is Found:
+	The AP remains in a disconnected state and continuously retries discovery.
+-No clients can connect until a WLC is restored.

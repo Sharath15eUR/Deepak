@@ -1,0 +1,52 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+
+CAPWAP tunnel establishment between an Access Point (AP) and a Wireless LAN Controller (WLC) follows a structured process.
+
+1.Tunnel Initialization (Discovery Phase)
+
+-The AP searches for a WLC using one of the following methods:
+	DHCP Option 43 (Receives WLC IP from DHCP server).
+	DNS Resolution (CISCO-CAPWAP-CONTROLLER.local).
+	Broadcast or Multicast Discovery (only in Layer 2 mode).
+	Preconfigured WLC IP address (manual configuration).
+-The AP sends a Discovery Request (CAPWAP packet) to the WLC.
+-The WLC replies with a Discovery Response, listing its capabilities.
+
+2.Tunnel Establishment (Join Phase)
+
+-The AP selects the best WLC (if multiple responses are received).
+-The AP sends a Join Request to the WLC.
+-The WLC verifies the AP using certificates or pre-shared keys.
+-If authentication is successful, the WLC responds with a Join Response.
+-A Control Tunnel (UDP 5246) is established using DTLS encryption for security.
+
+3.Tunnel Configuration (Configuration & Image Download Phase)
+
+-The WLC checks the AP's firmware version.
+-If an update is needed, the WLC pushes new firmware to the AP.
+-The WLC sends SSID, VLAN, RF, and security settings to the AP.
+-The AP applies the configuration and prepares to accept client connections.
+
+4.Data Transmission (Data Tunnel Establishment Phase)
+
+-A Data Tunnel (UDP 5247) is created between AP and WLC.
+-Client devices connect to the AP.
+-Data traffic is handled based on network mode:
+	Centralized Mode – All data is tunneled to WLC.
+	Flex Connect Mode – AP switches local traffic when possible.
+
+5.Tunnel Maintenance (Keep-Alive & Heartbeat Messages)
+
+-The AP sends periodic Keep-Alive messages to the WLC.
+-The WLC responds to confirm the tunnel is active.
+-If the AP doesn’t receive a response within the timeout period, it assumes WLC failure and starts re-discovery.
+
+6.Tunnel Termination (Disconnection or Failure Handling)
+
+-If the WLC goes offline, the AP:
+	Switches to Standalone Mode (if supported) or
+	Reboots and re-discovers a new WLC.
+
+If an AP fails, the WLC removes its entry from the database.

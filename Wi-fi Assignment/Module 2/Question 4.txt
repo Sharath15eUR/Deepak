@@ -1,0 +1,24 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+Lightweight APs vs Cloud-Based APs
+
+1.Lightweight APs
+
+-Managed by an on-premises Wireless LAN Controller (WLC).
+-Relies on the CAPWAP protocol for AP-WLC communication.
+-Offloads tasks like authentication, security, and traffic management to the WLC.
+-Used in large enterprises, campuses, and high-performance networks.
+-Offers seamless roaming, efficient bandwidth management, and centralized control.
+-Requires dedicated WLC hardware, increasing infrastructure costs.
+-Better security as management remains within the organization's network.
+
+2.Cloud-Based APs
+
+-Managed via a cloud controller hosted on the internet.
+-No need for on-premises WLC, reducing hardware costs.
+-Can be configured and monitored remotely via a web dashboard or mobile app.
+-Ideal for distributed networks, branch offices, and businesses with multiple locations.
+-Automatic updates and security patches handled by the cloud provider.
+-Depends on internet connectivity for management, which can be a limitation in unstable networks.
+-Highly scalable, as adding new APs does not require additional controllers.

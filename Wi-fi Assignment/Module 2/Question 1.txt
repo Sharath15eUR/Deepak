@@ -1,0 +1,47 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+Components of Split MAC Architecture
+
+1.Lightweight Access Point (AP)
+
+Also called Thin AP or Controller-based AP.
+Handles only real-time MAC functions like frame transmission, beacon generation, and roaming.
+Offloads complex functions to the WLC.
+Cannot operate independently—it requires a WLC to function.
+
+2.Wireless LAN Controller (WLC)
+
+A centralized device that manages multiple APs.
+Handles high-level MAC functions like authentication, encryption, QoS, and mobility management.
+Optimizes bandwidth allocation and load balancing.
+
+3.Control and Data Planes
+
+Control Plane (Management Traffic)
+Used for AP-WLC communication.
+Includes authentication, policy enforcement, and configuration updates.
+
+Data Plane (User Traffic)
+Handles actual data transmission between client devices and the network.
+
+
+How Split MAC Improves AP Performance
+
+1.Reduces AP Processing Load
+APs offload encryption, authentication, and QoS tasks to the WLC.
+This allows APs to focus on fast packet transmission.
+
+2.Better Scalability
+Centralized management by WLC makes it easier to scale multiple APs.
+Reduces overhead on individual APs.
+
+3.Improved Roaming & Seamless Handover
+The WLC handles client roaming decisions, ensuring smooth transitions between APs.
+
+4.Enhanced Security
+The WLC enforces centralized security policies, reducing vulnerabilities at the AP level.
+
+5.Efficient Resource Management
+The WLC manages bandwidth allocation, interference control, and load balancing.
+

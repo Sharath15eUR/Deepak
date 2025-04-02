@@ -1,0 +1,40 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+CAPWAP (Control and Provisioning of Wireless Access Points) is a protocol used to manage communication between Lightweight Access Points (APs) and a Wireless LAN Controller (WLC). It allows APs to be centrally controlled, reducing the processing load on APs and improving network efficiency.
+
+Features of CAPWAP:
+
+-Allows remote AP management from a centralized WLC.
+-Uses encryption to secure communication between AP and WLC.
+-Reduces overhead on APs, making them more efficient.
+-Supports Layer 3 communication, meaning APs and WLCs can be in different subnets.
+
+
+Packet flow between AP and controller
+
+1.AP Discovery
+The AP searches for a WLC using methods like:
+Preconfigured WLC IP address.
+DHCP Option 43 (WLC IP is provided by the DHCP server).
+DNS Resolution (CISCO-CAPWAP-CONTROLLER.local).
+Once the AP finds the WLC, it sends a Discovery Request.
+The WLC responds with a Discovery Response.
+
+2.AP Join Process
+The AP sends a Join Request to the WLC.
+The WLC verifies the AP and responds with a Join Response.
+A secure Control Tunnel is established using DTLS (Datagram Transport Layer Security).
+
+3.AP Configuration
+The AP requests firmware updates (if needed).
+The WLC sends configuration settings (SSID, VLANs, RF parameters).
+AP applies the configuration and is ready to serve clients.
+
+4.Data Transmission
+A Data Tunnel is established between the AP and WLC.
+User traffic is forwarded to the WLC (in centralized mode) or directly routed (in local mode).
+
+5.AP Keep-Alive & Roaming
+The AP sends Keep-Alive messages to the WLC to confirm it is active.
+If a client moves to another AP, the WLC handles seamless roaming.

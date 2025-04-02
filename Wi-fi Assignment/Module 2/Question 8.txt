@@ -1,0 +1,43 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+Challenges of Deploying Autonomous (Standalone) APs in a Large Network
+Deploying standalone APs across a large network, such as a university, comes with several challenges due to the absence of centralized management and coordination.
+
+1. Scalability Challenges
+
+-Manual Configuration: Each AP requires individual setup and ongoing management.
+-Firmware Management: Updating firmware across multiple APs is time-consuming and prone to inconsistencies.
+-Authentication Issues: Enforcing uniform security policies (e.g., WPA3, 802.1X) across all APs is difficult.
+
+2. Lack of Centralized Control
+
+-Inconsistent Settings: APs may have conflicting SSIDs, security configurations, or frequency settings.
+-Limited Network Visibility: Troubleshooting issues such as interference or client distribution is challenging without centralized monitoring.
+-Rogue AP Detection: No unified system to identify unauthorized access points on the network.
+
+3. Roaming Inefficiencies
+
+-Connectivity Drops: Devices may experience disruptions when moving between APs due to lack of seamless roaming.
+-Disjointed User Experience: Users may need to reconnect when switching between APs with different SSIDs or security settings.
+
+4. Security Risks
+
+-Decentralized Policy Enforcement: Access control lists (ACLs) and authentication mechanisms must be manually configured on each AP.
+-Increased Vulnerability: Detecting and mitigating security threats like spoofing and deauthentication attacks is more difficult.
+
+5. Network Performance Issues
+
+-No Load Balancing: Some APs may become overloaded while others remain underutilized.
+-Channel Interference: Without coordination, APs may operate on overlapping channels, degrading performance.
+-Lack of QoS: Traffic prioritization for critical applications is not efficiently managed.
+
+6. Maintenance Challenges
+
+-No Remote Management: Each AP must be accessed individually via IP or physical connection for troubleshooting.
+-Time-Consuming Diagnostics: Identifying and resolving issues like latency, packet loss, or interference requires significant manual effort.
+
+7. Increased Operational Costs
+
+-Higher Staffing Needs: More network administrators are required to manage APs individually.
+-Longer Downtime: The absence of centralized troubleshooting tools results in slower issue resolution
