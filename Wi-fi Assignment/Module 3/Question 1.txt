@@ -1,0 +1,22 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+1. What are the different 802.11 PHY layer standards? Compare their characteristics.
+
+The IEEE 802.11 standards define the physical (PHY) and MAC layers of wireless local area networks (WLANs). Over time, multiple amendments have introduced enhancements in speed, efficiency, and reliability.
+
+Various IEEE 802.11 standards are:
+
+-802.11: Original, up to 2 Mbps using FHSS/DSSS.
+
+-802.11a: Uses OFDM at 5 GHz, up to 54 Mbps.
+
+-802.11b: DSSS at 2.4 GHz, up to 11 Mbps.
+
+-802.11g: OFDM at 2.4 GHz, up to 54 Mbps.
+
+-802.11n: MIMO, dual-band, up to 600 Mbps.
+
+-802.11ac: MU-MIMO, 256-QAM, 5 GHz, gigabit speeds.
+
+-802.11ax (Wi-Fi 6): OFDMA, improved MU-MIMO, up to 9.6 Gbps.

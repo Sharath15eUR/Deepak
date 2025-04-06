@@ -1,0 +1,58 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+11. What are the types of PPDU? Explain the PPDU frame format across different Wi-Fi generations. 
+
+-PPDU (PLCP Protocol Data Unit) is the final PHY layer frame that is transmitted over the air in Wi-Fi communication.
+-It includes the preamble, headers, and MAC frame payload, structured by the PLCP and transmitted by the PMD.
+-Each Wi-Fi generation (802.11a/b/g/n/ac/ax) defines its own PPDU format to support specific features like higher throughput, MIMO, OFDMA, and more.
+
+Each Wi-Fi generation introduces a new type of PPDU. Here are the main types:
+
+1. Legacy PPDU (802.11a/g)
+
+This is the basic OFDM format used for single-user communication with limited modulation schemes (up to 64-QAM).
+Preamble: Short Training Field (STF), Long Training Field (LTF), SIGNAL field
+Data Field: MAC frame payload
+
+2. HT PPDU (802.11n – High Throughput)
+
+HT PPDU enables MIMO and frame aggregation, offering better throughput and reliability.
+
+Fields:
+
+-Legacy Preamble (for backward compatibility)
+-HT-SIG (High Throughput Signal)
+-HT-STF (Short Training Field)
+-HT-LTFs (Long Training Fields for MIMO)
+-Data (MAC frame)
+
+3. VHT PPDU (802.11ac – Very High Throughput)
+
+VHT PPDU adds support for MU-MIMO (downlink) and wider channels (up to 160 MHz), increasing data rates up to 6.9 Gbps.
+
+Fields:
+
+-Legacy Preamble
+-VHT-SIG-A and VHT-SIG-B
+-VHT-STF, VHT-LTFs
+-Data
+
+4. HE PPDU (802.11ax – High Efficiency)
+
+HE PPDUs support OFDMA, UL/DL MU-MIMO, BSS Coloring, and better performance in dense environments.
+
+Types:
+
+-HE SU PPDU (Single User)
+-HE MU PPDU (Multi-User, for OFDMA/MU-MIMO)
+-HE ER SU PPDU (Extended Range)
+-HE TB PPDU (Trigger-Based, uplink OFDMA)
+
+Fields:
+
+-HE-SIG-A, HE-SIG-B
+-HE-STF, HE-LTF
+-Data
+
+

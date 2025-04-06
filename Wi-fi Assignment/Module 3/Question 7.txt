@@ -1,0 +1,48 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+7. Describe the structure of an 802.11 PHY layer frame. What are its key components? 
+
+The PHY (Physical) layer frame in IEEE 802.11 is the lowest layer in the OSI model responsible for converting digital data into signals for wireless transmission. The PHY frame encapsulates the MAC frame and adds physical layer-specific information needed for proper signal processing, synchronization, and decoding at the receiver.
+
+A typical 802.11 PHY layer frame is made up of the following key components:
+	a) Preamble
+	b) PHY Header
+	c) Payload
+
+a) Preamble
+
+The preamble is sent before the actual data to help the receiving device align with the signal and prepare for decoding. It is crucial for setting up timing and understanding how to interpret the following data.
+
+Purpose: Used for synchronization, signal detection, and channel estimation.
+
+Components:
+
+-Short Training Field (STF) – helps the receiver detect the presence of a Wi-Fi signal.
+-Long Training Field (LTF) – used for channel estimation and equalization.
+-Signal Field (SIG) – carries modulation type, coding rate, and length of the data.
+
+b) Physical Header (SIGNAL Field)
+
+The SIGNAL field tells the receiver how to interpret the upcoming data – what modulation is used, how long the frame will be, and what coding is applied.
+
+Components:
+
+-Data rate
+-Length of payload
+-Modulation and coding scheme (MCS)
+-Parity bits and service fields
+
+c) Payload (MAC Frame/Data Field)
+
+The payload is where the real user data or management/control messages are carried. This is handed off from the MAC layer and is finally transmitted through the PHY layer.
+
+Components: This is the actual MAC frame, containing:
+
+-MAC header
+-Frame body (data)
+-Frame Check Sequence (FCS)
+
+
+
+

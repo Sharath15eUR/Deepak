@@ -1,0 +1,23 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+3. How do modulation schemes work in the PHY layer? Compare different modulation schemes and their performance across various Wi-Fi standards.
+
+Modulation is the process of encoding information onto carrier signals. The efficiency of modulation impacts speed, range, and error resilience.
+
+Types of Modulation:
+
+BPSK (Binary Phase Shift Keying): Sends 1 bit per symbol; highly robust but low data rate.
+
+QPSK (Quadrature PSK): Sends 2 bits per symbol; better data rate than BPSK.
+
+16-QAM, 64-QAM, 256-QAM: Send 4, 6, or 8 bits per symbol respectively. Higher QAM = faster speeds but less noise immunity.
+
+-802.11: Uses BPSK with DSSS/FHSS at 2.4 GHz for up to 2 Mbps.
+-802.11b: Uses DBPSK, DQPSK, and CCK for up to 11 Mbps at 2.4 GHz.
+-802.11a: Uses OFDM with BPSK, QPSK, 16-QAM, and 64-QAM at 5 GHz.
+-802.11g: Combines OFDM (BPSK to 64-QAM) and legacy CCK at 2.4 GHz.
+-802.11n: Uses OFDM with BPSK to 64-QAM and supports MIMO for higher speeds.
+-802.11ac: Uses OFDM with BPSK to 256-QAM and MU-MIMO at 5 GHz.
+-802.11ax (Wi-Fi 6): Uses OFDMA with BPSK to 1024-QAM across 2.4, 5, and 6 GHz.
+-802.11be (Wi-Fi 7): Will support up to 4096-QAM with advanced OFDMA and EHT features.

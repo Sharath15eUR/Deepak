@@ -1,0 +1,48 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+10. What are PPDU, PLCP, and PMD in the PHY layer? 
+
+The IEEE 802.11 Physical (PHY) layer is divided into the following sublayers, each playing a specific role in wireless transmission:
+
+-PPDU (PLCP Protocol Data Unit)
+-PLCP (Physical Layer Convergence Protocol)
+-PMD (Physical Medium Dependent)
+
+These components work together to convert MAC frames into actual radio signals and transmit them over the wireless medium.
+
+PPDU (PLCP Protocol Data Unit):
+
+-Think of the PPDU as the final "transmission packet" that includes everything the receiver needs to synchronize, decode, and extract the MAC layer data.
+-It is the complete frame that is transmitted over the air by the PHY layer.
+-It prepares the MAC frame for wireless transmission by adding necessary PHY headers and training sequences.
+
+Contains: Preamble, PHY header, and the MAC frame as payload.
+
+
+PLCP (Physical Layer Convergence Protocol):
+
+-PLCP acts as the bridge between the digital MAC frame and the physical radio signal, organizing the transmission structure and synchronization information.
+-Serves as an interface between the MAC layer and the PMD sublayer.
+
+Functions:
+
+-Adds preamble and PHY headers to create the PPDU.
+-Provides timing and format information to help the receiver interpret the signal.
+-Converts MAC Protocol Data Unit (MPDU) into PPDU.
+
+
+PMD (Physical Medium Dependent)
+
+-PMD is the hardware-facing part of the PHY layer—it’s responsible for the radio and electrical characteristics of transmission and reception.
+-Handles the actual transmission and reception of radio signals through antennas.
+
+Functions:
+
+-Converts bits into RF signals (modulation).
+-Handles frequency selection, signal power, modulation/demodulation, etc.
+-Communicates directly with the physical medium (air).
+
+
+
+

@@ -1,0 +1,11 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+12. How is the data rate calculated? 
+
+-Data rate refers to the speed at which data is transmitted over a wireless link, typically measured in Mbps (Megabits per second).
+-It depends on multiple PHY layer parameters, including modulation, coding rate, number of spatial streams, and channel bandwidth.
+
+FORMULA:
+
+Data Rate=(Bits per Subcarrier)×(Number of Subcarriers)×(Coding Rate)×(Spatial Streams)÷(Symbol Duration)

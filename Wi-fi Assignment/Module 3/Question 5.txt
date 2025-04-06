@@ -1,0 +1,34 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+5. How are frequency bands divided for Wi-Fi? Explain different bands and their channels. 
+
+Wi-Fi operates in three primary frequency bands:
+
+1. 2.4 GHz Band
+2. 5 GHz Band
+3. 6 GHz Band (introduced with Wi-Fi 6E)
+
+Each band is divided into channels, which are specific frequency ranges used for communication. These channels help prevent interference and allow multiple devices to communicate simultaneously.
+
+2.4 GHz Band:
+
+-Frequency Range: 2.400 – 2.4835 GHz
+-Number of Channels: 14 channels (not all are allowed in every country)
+-Channel Width: 20 MHz
+-Overlapping: Channels are spaced only 5 MHz apart, causing overlapping and interference.
+-Non-overlapping Channels: Only 3 non-overlapping channels – 1, 6, and 11 in most countries.
+
+5 GHz Band:
+
+-Frequency Range: 5.150 – 5.825 GHz (varies by region)
+-Number of Channels: Up to 25 (varies by country)
+-Channel Widths: 20 MHz, 40 MHz, 80 MHz, and 160 MHz
+-Non-overlapping Channels: Many – because channels are spaced farther apart.
+
+6 GHz Band (Wi-Fi 6E and 7):
+
+-Frequency Range: 5.925 – 7.125 GHz (in some regions)
+-Number of Channels: Up to 59 new 20 MHz channels
+-Channel Widths: Supports up to 160 MHz and even 320 MHz in Wi-Fi 7
+-Interference: Minimal, as it’s a new and less crowded band.

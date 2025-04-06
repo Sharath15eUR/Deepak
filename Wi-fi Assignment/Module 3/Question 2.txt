@@ -1,0 +1,18 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+2. What are DSSS and FHSS? How do they work?
+
+Both DSSS and FHSS are spread spectrum techniques used to improve signal reliability and reduce interference in wireless communication.
+
+Direct Sequence Spread Spectrum (DSSS):
+
+-Converts each bit into a sequence (chipping code) which spreads the signal.
+-Enhances resistance to interference and jamming.
+-Used in 802.11b, it provides robustness and consistent performance.
+
+Frequency Hopping Spread Spectrum (FHSS):
+
+-Signal rapidly hops across different frequencies within a band.
+-Reduces the chance of signal collision.
+-Was part of the original 802.11 standard but is rarely used in modern Wi-Fi.

@@ -1,0 +1,22 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+9. What is the difference between MIMO and MU-MIMO? 
+
+MIMO (Multiple Input Multiple Output):
+
+-MIMO is a wireless technology that uses multiple antennas at both the transmitter and receiver to send and receive more data simultaneously.
+-It improves data rate, signal reliability, and range by creating multiple spatial data streams.
+-MIMO boosts speed and reliability for individual devices using multiple antennas.
+
+Example: A 4x4 MIMO system can send four independent streams of data at once, increasing throughput.
+
+Used In: 802.11n, 802.11ac, 802.11ax (Wi-Fi 4/5/6)
+
+MU-MIMO (Multi-User MIMO):
+
+-MU-MIMO is an advanced form of MIMO that allows multiple users to receive separate data streams simultaneously from the same access point.
+-Instead of serving users one at a time (like in SU-MIMO), MU-MIMO can serve multiple clients at once, improving network efficiency.
+-MU-MIMO builds on this by allowing simultaneous communication with multiple devices, making Wi-Fi more scalable and efficient, especially in busy networks.
+
+Used In: Introduced in 802.11ac (Wi-Fi 5, downlink) and enhanced in 802.11ax (Wi-Fi 6, uplink & downlink)
