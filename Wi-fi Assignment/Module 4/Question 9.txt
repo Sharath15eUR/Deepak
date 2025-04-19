@@ -1,0 +1,30 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+9. Brief about the Block ACK mechanism and its advantages
+
+The Block ACK (Acknowledgement) mechanism is a feature used in Wi-Fi networks (802.11) to enhance the efficiency of data transmission by allowing multiple frames to be acknowledged with a single acknowledgment packet. It is particularly important in high-throughput environments where frequent acknowledgments (ACKs) for each individual frame can be inefficient and add unnecessary overhead.
+
+How Block ACK Works:
+
+-Instead of acknowledging each individual frame separately, the receiver sends a single Block ACK to acknowledge multiple frames within a block.
+-The transmitter sends a set of frames (a block of frames) and waits for the Block ACK from the receiver, which confirms the successful reception of all frames within the block.
+-The Block ACK contains information about which frames in the block were successfully received and which were lost. This allows the transmitter to retransmit only the lost frames rather than all the frames in the block.
+
+Steps in Block ACK:
+
+i). Initiate Block ACK Agreement: Before using Block ACK, both the sender and receiver negotiate and agree to use this mechanism by exchanging Block ACK request and Block ACK agreement frames.
+ii). Data Transmission: The sender transmits multiple frames as a block.
+iii). Block ACK Response: The receiver sends a Block ACK frame that indicates which frames were successfully received and which were not.
+iv). Retransmission (if needed): If any frames were lost, the sender retransmits only those specific frames.
+
+Advantages:
+
+Reduced Overhead:
+-By sending a single acknowledgment for a block of frames instead of an ACK for each frame, Block ACK reduces the number of control frames, leading to lower overhead.
+
+Improved Efficiency:
+-Fewer control frames allow more bandwidth to be dedicated to data transmission, improving overall throughput.
+
+Selective Retransmission:
+-Only lost frames are retransmitted, rather than the entire block, making retransmissions more efficient.

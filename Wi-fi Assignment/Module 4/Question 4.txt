@@ -1,0 +1,13 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+
+4. Explain the Scanning process and its types in detail
+
+Scanning is the process by which a wireless device (STA - Station) discovers nearby wireless networks (BSS/ESS) before initiating a connection. It allows the station to find available Access Points (APs), determine their capabilities, and select the best one to associate with.
+
+i. PASSIVE SCANNING: 
+	A wireless station (STA) listens for beacon frames that are periodically transmitted by nearby access points (APs). These beacon frames contain critical information about the wireless network, such as the SSID, supported data rates, channel information, and security capabilities. The STA does not transmit any frames during this process. However, it can be slower, especially if the STA has to wait for the next scheduled beacon on each channel.
+
+ii. ACTIVE SCANNING: 
+	In active scanning, the wireless station (STA) proactively sends probe request frames on each channel to discover available wireless networks. Access points (APs) that receive the probe request respond with probe response frames, providing information such as the SSID, capabilities, and supported data rates. Active scanning is generally faster than passive scanning because the STA doesn’t need to wait for beacons—it actively triggers a response. However, it consumes more power and creates additional traffic, which can be a consideration in power-sensitive or congested environments.

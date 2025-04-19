@@ -1,0 +1,32 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+10. Explain about A-MSDU, A-MPDU and A-MSDU in A-MPDU
+
+1. A-MSDU (Aggregated MAC Service Data Unit)
+
+-A-MSDU aggregates multiple MSDUs (MAC Service Data Units) into a single MPDU (MAC Protocol Data Unit).
+-Multiple higher-layer packets (MSDUs) are combined into a single data frame at the MAC layer. These MSDUs must be destined for the same receiver.
+-Structure: 
+	Each MSDU inside the A-MSDU has its own subframe header and payload, but the entire A-MSDU is enclosed within a single MAC header and trailer (like FCS).
+-Reduces MAC header overhead.
+-Increases efficiency by sending more data per transmission.
+-If there’s an error in transmission, the entire A-MSDU needs to be retransmitted, even if only one subframe failed.
+
+2. A-MPDU (Aggregated MAC Protocol Data Unit)
+
+-A-MPDU aggregates multiple MPDUs into a single physical layer (PHY) frame.
+-Each MPDU has its own MAC header and Frame Check Sequence (FCS). They are sent together as a single transmission at the PHY layer.
+-Structure:
+	Multiple MPDUs are separated by a delimiter. Since each MPDU has its own FCS, if one fails, only that one is retransmitted.
+-Better error handling than A-MSDU.
+-Allows selective retransmission of corrupted MPDUs.
+-Very efficient in high-throughput networks.
+
+3. A-MSDU inside A-MPDU (Two-Level Aggregation)
+
+-Combines the benefits of both A-MSDU and A-MPDU. An A-MSDU is first formed (aggregating MSDUs), and then multiple A-MSDUs are packed into an A-MPDU.
+-Each MPDU in the A-MPDU can carry an A-MSDU.
+-This allows higher efficiency (less header overhead) and more flexibility in retransmissions (since A-MPDU enables per-MPDU retransmission).
+-Higher throughput than using A-MSDU or A-MPDU alone.
+-Efficient use of bandwidth with better error recovery.

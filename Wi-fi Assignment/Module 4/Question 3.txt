@@ -1,0 +1,31 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+3. Please list all the MAC layer functionalities in all Management, Control and Data plane
+
+MAC layer functionalities in 
+
+MANAGEMENT PLANE:
+
+-Scanning
+-Client Association
+-Security Management
+-Qos Management
+-Power Management
+-Load balancing
+-WLAN Roaming
+
+CONTROL PLANE:
+
+-Flow Control
+-Medium Access control
+   -Distributed coordination function
+   -Point coordination function
+   -Enhanced distributed channel access
+
+DATA PLANE:
+
+-Frame Aggregation
+   -A-MSDU (MAC Service Data Unit)
+   -A-MPDU (MAC Protocol Data Unit)
+

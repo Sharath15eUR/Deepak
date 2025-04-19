@@ -1,0 +1,32 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+1. What is the significance of MAC layer and in which position it is placed in the OSI model ?
+
+POSITION OF MAC LAYER:
+
+MAC Layer is placed in Layer 2 - DATA LINK LAYER in OSI Model.
+
+SIGNIFICANCE OF MAC LAYER:
+ 
+a. Channel Access Control
+
+-It manages how devices access the wireless medium, avoiding collisions.
+-Uses techniques like CSMA/CA (Carrier Sense Multiple Access with Collision Avoidance) in Wi-Fi.
+
+b. Frame Construction & Addressing
+
+-Builds MAC frames with source and destination MAC addresses.
+-Ensures that data is directed to the correct device.
+
+c. Reliable Delivery
+
+-Handles acknowledgments (ACKs), retries, and retransmissions to ensure that frames are delivered reliably over a potentially error-prone wireless medium.
+
+d. Security
+
+-Responsible for encryption and decryption using protocols like WPA2/WPA3 at the frame level.
+
+e. QoS and Traffic Management
+
+-Implements Quality of Service (QoS) using mechanisms like EDCA (Enhanced Distributed Channel Access), giving priority to voice/video traffic

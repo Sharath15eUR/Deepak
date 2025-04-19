@@ -1,0 +1,45 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+5. Brief about Client Association process
+
+The client (STA) association process is essential for a wireless device to discover and join a Wi-Fi network. It involves several coordinated steps between the STA and Access Point (AP):
+
+1. Scanning – Network Discovery Phase
+
+The process begins with the STA scanning for available networks:
+-Passive Scanning: The STA listens for periodic Beacon frames sent by nearby APs, which advertise their SSID and capabilities.
+-Active Scanning: The STA sends out Probe Request frames to actively search for APs. APs that receive this request respond with Probe Response frames containing network information.
+
+2. Probe Request – Client Initiated Search
+
+-The STA broadcasts a Probe Request to locate nearby access points.
+-It may include a specific SSID (for known networks) or use a broadcast SSID to discover all available APs.
+-It also includes supported features like data rates and capabilities.
+
+3. Probe Response – AP’s Advertisement
+
+-In response to a probe request, the AP sends a Probe Response frame.
+-This response contains details such as the SSID, supported data rates, security features (like WPA/WPA2), and other operational capabilities.
+-The STA uses this to decide which AP to connect with.
+
+4. Authentication – Establishing Initial Trust
+
+-After selecting a preferred AP, the STA initiates authentication:
+   -It sends an Authentication Request frame.
+   -The AP replies with an Authentication Response.
+
+Depending on the network, this could be Open System (no real verification) or Shared Key (requires credentials like a password).
+
+5. Association – Network Joining
+
+-Once authentication is successful, the STA proceeds to associate:
+   -It sends an Association Request frame with its supported capabilities.
+   -The AP evaluates this and replies with an Association Response frame.
+
+Upon success, the STA receives an Association ID (AID) and becomes part of the WLAN.
+
+6. Data Transmission – Start of Communication
+
+-After successful association, the STA can now send and receive data across the wireless network.
+-In secured networks (e.g., WPA2/WPA3), a 4-Way Handshake is performed next to establish encryption keys before data exchange.

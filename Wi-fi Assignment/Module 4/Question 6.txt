@@ -1,0 +1,38 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+6. Explain each step involved in EAPOL 4-way handshake and the purpose of each keys derived from the process.
+
+The EAPOL 4-Way Handshake ensures both the client (Supplicant) and Access Point (Authenticator) derive the same encryption keys using shared knowledge of the Pairwise Master Key (PMK). It also securely distributes the Group Temporal Key (GTK).
+
+Steps in the 4-Way Handshake:
+
+Message 1: Authenticator to Supplicant
+-Authenticator sends ANonce to the supplicant.
+-Purpose: Begin handshake and share a random number (ANonce).
+-Supplicant already knows PMK and now receives ANonce.
+
+Supplicant: Derive PTK
+-Supplicant generates SNonce.
+-Uses PMK, SNonce, ANonce, and MAC addresses to derive the PTK.
+-PTK is split into multiple keys:
+   KCK (Key Confirmation Key) – for message integrity
+   KEK (Key Encryption Key) – for encrypting the GTK
+   TK (Temporal Key) – for encrypting data frames
+
+Message 2: Supplicant to Authenticator
+-Sends SNonce and a Message Integrity Code (MIC) using PTK.
+-Authenticator now has both ANonce and SNonce, and knows PMK.
+-It uses them to derive the same PTK.
+
+Authenticator: Derive PTK and Generate GTK
+-Authenticator derives PTK from PMK, ANonce, SNonce, and MAC addresses.
+-If GTK needs to be updated, it is encrypted using KEK.
+
+Message 3: Authenticator to Supplicant
+-Sends the encrypted GTK, MIC, and a confirmation to install PTK.
+-Purpose: Deliver GTK securely and confirm PTK installation.
+
+Message 4: Supplicant to Authenticator
+-Acknowledges the successful installation of PTK and GTK using MIC.
+-Purpose: Final confirmation that keys are installed and ready.

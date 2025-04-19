@@ -1,0 +1,49 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+2. Describe the frame format of the 802.11 MAC header and explain the purpose of each fields
+
+The MAC frame generally consists of:
+
+-MAC Header
+-Frame Body (Payload)
+-Frame Check Sequence (FCS)
+
+MAC Header consists of following fields:
+
+1.Frame Control (2 bytes)
+
+-Indicates type of frame: data, control, or management.
+-Subfields: version, type, subtype, To DS, From DS, retry, power management, etc.
+-Controls how the frame is processed and interpreted.
+
+2. Duration/ID (2 bytes)
+
+-Holds the Network Allocation Vector (NAV) duration value or an association ID.
+-Prevents collisions by reserving the medium.
+
+3. Address Fields (6 bytes each)
+
+-Address 1: Receiver MAC (destination)
+-Address 2: Transmitter MAC (source)
+-Address 3: Used depending on frame type (e.g., BSSID, final destination)
+-Address 4: Only used in WDS (e.g., AP-to-AP communication)
+
+Supports communication across multiple network architectures (like infrastructure and ad hoc).
+
+4. Sequence Control (2 bytes)
+
+-Includes sequence number and fragment number.
+-Helps in ordering and reassembly of fragmented frames.
+
+5. QoS Control (2 bytes, optional)
+
+-Used in QoS-enabled frames (e.g., voice/video).
+-Contains Traffic Identifier (TID) and flags.
+-It Prioritizes traffic.
+
+6. HT Control (4 bytes, optional)
+
+-Introduced in 802.11n and used in later versions.
+-Supports high-throughput features like beamforming feedback.
+-This field Enhances advanced communication features.

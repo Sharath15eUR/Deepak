@@ -1,0 +1,62 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+8. Describe the Medium Access Control methodologies 
+
+1. Contention-Based Access (Random Access)
+
+i). Carrier Sense Multiple Access with Collision Avoidance (CSMA/CA)
+
+Primary usage: Employed in Wi-Fi (IEEE 802.11) networks.
+
+Key steps in CSMA/CA:
+
+-Carrier Sensing: Before transmitting, a station listens to the channel to detect if it’s idle or occupied.
+-Idle Channel: If the channel is clear, the station waits for a random backoff period to reduce the likelihood of simultaneous transmissions.
+-Busy Channel: If the channel is already in use, the station defers its transmission and tries again later.
+
+Collision Avoidance (instead of detection):
+
+-In contrast to CSMA/CD (Ethernet), where collisions are detected after transmission, CSMA/CA focuses on avoiding collisions proactively using mechanisms like:
+   -Interframe Spacing (IFS): Special time gaps between transmissions to manage access priorities (e.g., DIFS for data frames, SIFS for responses).
+   -Random Backoff: A random waiting period before retransmitting if the channel was busy.
+   -RTS/CTS (Request to Send / Clear to Send): A handshake procedure that helps devices reserve the channel and avoid hidden node issues.
+
+Clear Channel Assessment (CCA): The process where devices sense the medium to confirm if it’s available for transmission.
+
+
+2. Contention-Free Access (Scheduled Access)
+
+i). Point Coordination Function (PCF)
+
+PCF allows for scheduled access in a Wi-Fi network where the Access Point (AP) takes on the role of a central coordinator.
+
+Working:
+
+-The AP polls each station one by one, granting them permission to transmit data.
+-Collision-Free: As each station is polled individually, there are no transmission conflicts, ensuring smooth data flow.
+-Due to its inherent complexity, PCF is rarely used in real-world networks despite being effective at eliminating collisions.
+
+ii). Hybrid Coordination Function Controlled Channel Access (HCCA)
+
+-Part of 802.11e (Wi-Fi Quality of Service - QoS): HCCA enables a more dynamic allocation of the channel, offering guaranteed bandwidth for certain traffic types like voice or video.
+-The Hybrid Coordinator (HC) in the AP allocates specific transmission time to devices based on their traffic priority and requirements.
+-Ensures quality service for high-priority traffic like voice and video, minimizing delay and maintaining performance.
+-Like PCF, HCCA is complex and not as commonly implemented due to its demanding nature.
+
+
+3. Scheduled Access in Modern Standards
+
+i).Target Wake Time (TWT) – IEEE 802.11ax (Wi-Fi 6)
+
+-Key feature in Wi-Fi 6 (802.11ax): TWT allows the AP and devices to negotiate specific wake-up schedules for efficient communication.
+-Collision-Free Communication: By determining when each device will transmit, the AP ensures that there’s no overlap, reducing collisions and contention.
+-Devices can enter sleep mode when not transmitting, which is especially beneficial in IoT networks where power consumption is a concern.
+-TWT is extremely useful for networks with dense devices like IoT ecosystems or smart environments, where devices have limited energy and need synchronized communication.
+
+ii). OFDMA (Orthogonal Frequency Division Multiple Access)
+
+-Introduced in 802.11ax (Wi-Fi 6): OFDMA enhances the efficiency of wireless networks by allowing the AP to divide the available spectrum into Resource Units (RUs), enabling multiple devices to transmit and receive simultaneously.
+-Enhanced Spectrum Efficiency: By dividing the channel into subchannels, each device communicates on a distinct RU, maximizing bandwidth use.
+-Low Latency: This method reduces the time devices wait to transmit, improving overall network responsiveness and performance.
+-High-Density Networks: OFDMA is optimal in environments with many clients, such as stadiums or offices, where traditional methods might struggle.

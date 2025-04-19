@@ -1,0 +1,55 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+7. Describe the power saving scheme in MAC layer and explore on the types of Power saving mechanisms
+
+The IEEE 802.11 MAC layer includes power-saving mechanisms to help reduce power consumption, especially for mobile and battery-operated devices like smartphones, tablets, and IoT sensors. The idea is to allow the device (STA) to enter a low-power “doze” state when there is no data to send or receive and wake up periodically to check for buffered data from the AP.
+
+1. Legacy Power Save Mode (PSM)
+
+WORKING:
+
+-STAs switch between awake and doze states.
+-AP buffers unicast data for STAs in doze mode.
+-AP indicates pending data using a Traffic Indication Map (TIM) in Beacon frames.
+-The STA wakes up at Beacon intervals to check the TIM.
+-If data is pending, the STA sends a PS-Poll frame to request delivery.
+
+PURPOSE: Simple and effective for low-traffic devices.
+
+LIMITATION: Introduces latency due to polling and beacon waiting.
+
+2. Unscheduled Automatic Power Save Delivery (U-APSD)
+Also known as WMM Power Save (Wi-Fi Multimedia Power Save).
+
+WORKING:
+
+-Used mainly in VoIP and real-time applications.
+-Triggered by the STA sending a data or trigger frame.
+-AP responds by sending buffered frames for that STA immediately.
+
+ADVANTAGES:
+
+-Lower latency than legacy PSM.
+-More efficient for bursty, real-time traffic.
+-Supported in: 802.11e (QoS-enabled devices)
+
+3. Scheduled Automatic Power Save Delivery (S-APSD)
+
+-Uses scheduled delivery times agreed between AP and STA.
+-STA wakes up at pre-negotiated service periods.
+-AP sends buffered data during these times without requiring a trigger.
+
+ADVANTAGES:
+-Very efficient for applications that transmit periodically.
+
+4. Target Wake Time (TWT) – Introduced in 802.11ax (Wi-Fi 6)
+
+-TWT allows STAs to negotiate specific wake-up times with the AP.
+
+ADVANTAGES:
+
+-Dramatically reduces unnecessary wake-ups.
+-Ideal for IoT and smart home devices.
+-Enables multi-client coordination to reduce channel contention.
+-Long battery life for low-power clients like sensors
