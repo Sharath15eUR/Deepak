@@ -1,0 +1,20 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+4. Explain the significance of the 6 GHz frequency band in Wi-Fi 6E.
+
+Wi-Fi 6E is an enhancement of Wi-Fi 6 that extends its capabilities by introducing the 6 GHz frequency band. The 6 GHz band refers to the 5.925 GHz to 7.125 GHz frequency range.
+
+Significance of 6GHz Band:
+
+1.More Spectrum provides More Capacity
+-Provides up to 14 additional 80 MHz channels or 7 ultra-wide 160 MHz channels.
+-Reduces congestion, especially in crowded urban and enterprise environments.
+
+2.Less Interference
+-The 6 GHz band is exclusively for Wi-Fi 6E and newer devices.
+-No legacy devices (like older phones, printers, etc.) use this band, resulting in cleaner, faster connections.
+
+3.Lower Latency
+-Ideal for real-time applications like gaming, VR/AR, and 4K/8K streaming.
+-Wider channels and low interference lead to faster data transmission with less delay.

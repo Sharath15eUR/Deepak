@@ -1,0 +1,26 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+2. Explain the role of OFDMA in Wi-Fi 6 and how it improves network efficiency.
+
+In Wi-Fi 6 (802.11ax), OFDMA (Orthogonal Frequency Division Multiple Access) plays a central role in improving the overall performance and efficiency of wireless networks. It is one of the key technologies that differentiates Wi-Fi 6 from previous standards.
+
+-OFDMA divides a wireless channel into subchannels, allowing multiple devices to transmit data simultaneously, increasing network efficiency.
+-A critical difference between OFDM and OFDMA is that OFDM transmits to a single user, while Wi-Fi OFDMA allows multiple simultaneous users by allocating subsets of subcarriers.
+-OFDMA enhances throughput, capacity, quality of service, and efficiency in high-density environments like offices and malls by servicing many clients simultaneously.
+-While complex, OFDMA provides high throughput, low latency, and continued advancements for future wireless networking.
+
+
+Attributes that improves network efficiency:
+
+High throughput
+OFDMA's innovations allow radio waves to carry more data in shorter timeframes.
+
+Low latency
+OFDMA reduces response times and enhances performance for video, artificial intelligence (AI), and virtual- and augmented-reality applications.
+
+IoT optimization
+OFDMA prevents Internet of Things (IoT) devices from using disproportionate network resources.
+
+More-efficient power consumption
+OFDMA allows per-channel or per-subchannel power and lower maximal transmission power for low-data-rate users, eliminating pulsed carriers and conserving battery life in devices.

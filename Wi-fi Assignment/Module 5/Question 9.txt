@@ -1,0 +1,26 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+9. Explain the concept of Fast BSS Transition (802.11r) and its benefit in mobile environments.
+
+Fast BSS Transition (802.11r) is a Wi-Fi standard that enables faster and more seamless transitions between wireless access points (APs) in a mobile environment. It accomplishes this by optimizing the reassociation process, reducing the time it takes for a device to connect to a new AP and maintain a continuous connection.
+
+Working of Fast BSS Transition:
+
+1.Pre-authentication:
+Before roaming, the device can pre-authenticate with nearby APs, ensuring it’s ready to switch without a full authentication process.
+
+2.Fast Transition Protocol (FT):
+This protocol allows the current AP and the new AP to exchange security keys and session information, enabling a quicker handoff.
+
+3.Key Caching:
+APs cache the client’s security keys. When the device roams to a new AP, it can use the cached keys to authenticate quickly, avoiding the need for a time-consuming handshake.
+
+4.Roaming:
+The device moves to the new AP, and the transition is completed with minimal delay, maintaining a secure and continuous connection.
+
+Key Benefits in Mobile Environments:
+
+-Improved Latency: By minimizing the time it takes to switch between APs, 802.11r reduces latency, which is crucial for applications like VoIP, video conferencing, and real-time gaming, where even a slight delay can be disruptive. 
+-Reduced Data Loss: The faster transition also minimizes data loss during the handover, leading to a more stable and reliable connection. 
+-Enhanced User Experience: Users experience a more seamless and uninterrupted wireless connection as they move from one AP to another. 

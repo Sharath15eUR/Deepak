@@ -1,0 +1,24 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+8. What is the purpose of 802.11k and v, and how does it aid in roaming?
+
+802.11k and 802.11v are both enhancements to Wi-Fi standards that aim to improve roaming and overall performance in wireless networks.
+
+802.11k (Radio Resource Management):
+
+802.11k improves network efficiency and roaming by providing devices with better information about the surrounding network, allowing them to make more informed decisions about which access point (AP) to connect to.
+
+How it aids roaming:
+
+-802.11k allows an AP to share information about nearby APs (their signal strength, load, and capabilities) with clients. This helps clients identify the best AP to roam to.
+-With knowledge of neighboring APs, a client can roam more efficiently and switch to an AP that provides a better connection, reducing delays and dropped packets during the handoff process.
+
+802.11v (Wireless Network Management):
+
+802.11v enhances network management to help with roaming by providing mechanisms for dynamic network optimization and client steering.
+
+How it aids roaming:
+
+-802.11v enables the AP to suggest which AP the client should roam to based on its current signal strength and quality. This allows for more controlled handoffs.
+-The AP can inform the client about congestion on certain APs, helping the client choose a less congested AP for roaming, improving overall network performance.

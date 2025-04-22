@@ -1,0 +1,19 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+5. Compare and contrast Wi-Fi 6 and Wi-Fi 6E in terms of range, bandwidth, and interference.
+
+Range
+
+Wi-Fi 6: Uses 2.4 GHz and 5 GHz Better range, especially 2.4 GHz due to stronger wall penetration.
+Wi-Fi 6E: Uses 6 GHz .Best for short-distance, high-speed use.
+
+Bandwidth
+
+Wi-Fi 6: Limited to existing bands. fewer wide channels.
+Wi-Fi 6E: Adds up to 1200 MHz of spectrum in 6 GHz. More 80/160 MHz channels for faster data rates.
+
+Interference
+
+Wi-Fi 6: Shares spectrum with many legacy devices. More interference.
+Wi-Fi 6E: Dedicated 6 GHz band for new devices only. Cleaner, interference-free operation.

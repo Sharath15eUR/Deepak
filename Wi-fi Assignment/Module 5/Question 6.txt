@@ -1,0 +1,27 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+6. What are the major innovations introduced in Wi-Fi 7 (802.11be)?
+
+Major innovations in Wi-fi 7 :
+
+Wider Channels:
+Wi-Fi 7 provides channels of 320 MHz, double the bandwidth of Wi-Fi 6 (160 MHz), which results in far greater data transfer speeds.
+
+4K-QAM:
+This enhanced modulation method packs more data in each symbol, further increasing data transfer speed.
+
+Multi-Link Operation (MLO):
+MLO allows for devices to have multiple links to operate at once, enhancing throughput and minimizing latency, particularly in crowded environments.
+
+Multiple Resource Unit (MRU):
+MRU enables more effective resource management and scheduling, which results in enhanced performance and lower latency.
+
+6 GHz Band Support:
+Wi-Fi 7 still supports the 6 GHz band, offering a broader range of frequencies with less interference, resulting in faster and more stable connections.
+
+Enhanced Efficiency:
+Wi-Fi 7 includes several optimizations to improve the efficiency of the network, such as improvements in MU-MIMO and OFDMA technology.
+
+Higher Throughput
+These technologies combined enable Wi-Fi 7 to deliver data rates much greater than its predecessors, with some estimates predicting speeds of over 30 Gbps

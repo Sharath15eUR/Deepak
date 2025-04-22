@@ -1,0 +1,19 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+10. How do 802.11k/v/r work together to provide seamless roaming in enterprise networks?
+
+1.802.11k: Neighbor Discovery and Optimized Roaming Target Selection
+-802.11k supplies the client with a neighbor report of close APs and channel details.
+-This makes it easier for the client to not have to scan through all available channels to look for a better AP.
+-The client is able to then choose the optimal AP efficiently from the neighbor report, decreasing roaming latency and time.
+
+2.802.11r: Fast Roaming with Fast Transition
+-802.11r enables Fast Basic Service Set Transition (FT), in which the client is able to authenticate and associate with the target AP in less time.
+-FT has a pre-authentication process whereby the client and target AP send information prior to actual handover.
+-This decreases the time required for re-authentication and re-association when roaming, causing minimal disruption.
+
+3.802.11v: Network-Driven Roaming
+-802.11v provides for the capability of the network to control client roaming behavior by way of BSS Transition Management (BTM).
+-The network can make suggestions to the client, recommending which AP to roam to, depending on network utilization, signal quality, and so on.
+-This ensures clients roam to the most appropriate AP, maximizing overall network performance and reducing disturbances

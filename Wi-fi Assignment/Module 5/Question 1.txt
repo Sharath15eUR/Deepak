@@ -1,0 +1,34 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+1. What are the key features of Wi-Fi 6, 6E and 7 and how do they differ from previous standards like Wi-Fi 5 (802.11ac)?
+
+
+Wi-fi 6 and 6E:
+
+-IEEE 802.11ax
+-Bands : 2.4Ghz, 5Ghz
+-Data rate : 9.6Gbps
+-Channel Bandwidths: 20,40,80,160 MHz
+-1024 QAM
+
+-Key features:
+   -Best in class WPA3 security
+   -UL and DL MU-MIMO OFDMA
+   -Target wait time(TWT)
+
+
+Wi-fi 7:
+
+-IEEE 802.11be
+-Bands : 2.4GHz, 5GHz, 6GHz
+-Data rate : 46 Gpbs
+-Channel Bandwidth : 20,40,80,160,320 MHz
+-4096 QAM
+
+-Key features:
+   -Multi-link operation
+   -Mutli-RU and puncturing
+   -managed Qos and restricted service periods
+
+When compared to Wi-fi 5, Wi-Fi 6 and 6E brought major improvements in terms of efficiency, capacity, and power saving, while Wi-Fi 7 focuses on ultra-high speeds, lower latency, and smarter spectrum usage.

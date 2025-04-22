@@ -1,0 +1,19 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+7. Explain the concept of Multi-Link Operation (MLO) and its impact on throughput and latency.
+
+
+Multi-Link Operation (MLO) in Wi-Fi 7 allows devices to send and receive data on multiple frequency bands and channels at the same time, greatly enhancing throughput and minimizing latency. MLO increases reliability, enables improved spectrum use, and accommodates new applications that need real-time performance.
+
+Impact on Throughput:
+
+-MLO combines bandwidth from multiple links, resulting in much higher data rates.
+-It enables aggregation of data streams, effectively boosting total throughput.
+-Ideal for high-bandwidth applications like 8K video streaming or VR gaming.
+
+Impact on Latency:
+
+-By dynamically switching between links, MLO reduces delays caused by congestion or interference on one band.
+-Ensures faster data delivery and lower response times, especially for real-time applications like video conferencing or online gaming.
+-It provides link redundancy, improving reliability and seamless experience.
