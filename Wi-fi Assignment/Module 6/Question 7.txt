@@ -1,0 +1,28 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+7. How does the 4-way handshake ensure mutual authentication between the client and the access point?
+
+The 4-way handshake ensures mutual authentication by verifying the identity and shared secrets of both the client and the access point. It achieves this by exchanging nonces and authentication data, allowing each party to verify the other's credentials and derive a shared encryption key, ensuring secure communication. 
+
+1. Message 1 (AP to Client):
+
+-AP sends a random number called the ANonce (Authenticator Nonce) to the client.
+
+2. Message 2 (Client to AP):
+
+-Client uses the ANonce, its own SNonce (Supplicant Nonce), its MAC address, the AP’s MAC address, and the shared PMK to generate a Pairwise Transient Key (PTK).
+-It sends the SNonce and a Message Integrity Code (MIC)—a hash created using the PTK—to the AP.
+
+3. Message 3 (AP to Client):
+
+-AP also derives the same PTK using the shared PMK, ANonce, and SNonce.
+-It verifies the MIC sent by the client.
+-If correct, it sends back another MIC to prove it also has the correct PTK.
+
+4. Message 4 (Client to AP):
+
+-Client verifies the AP’s MIC.
+-If correct, it installs the encryption keys and sends a confirmation.
+
+The 4-way handshake confirms the identity of both the client and the AP by verifying that they can both derive the correct encryption keys, enabling secure, mutual authentication.

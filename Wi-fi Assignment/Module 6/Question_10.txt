@@ -1,0 +1,25 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+10. How does 802.1X enhance security over wireless networks?
+
+Features of 802.1X which enhances security are:
+
+1. Strong Authentication:
+
+-Uses secure methods like usernames/passwords, certificates.
+-Works with a RADIUS server to verify the user's identity.
+
+2. Prevents Unauthorized Access:
+
+-A device cannot send or receive data until it passes authentication.
+-Helps protect the network from intruders or rogue devices.
+
+3. Dynamic Encryption Keys:
+
+-Once authenticated, the network generates unique encryption keys for each session.
+-This prevents attackers from reusing captured data.
+
+4. Enterprise-Grade Security:
+
+-Commonly used in WPA2/WPA3-Enterprise mode, offering better protection than pre-shared keys.

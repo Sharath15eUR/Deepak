@@ -1,0 +1,12 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+6. What is the role of the Pairwise Master Key (PMK) in the 4-way handshake?
+
+The Pairwise Master Key (PMK) plays a central role in the 4-way handshake process used in WiFi security protocols like WPA2 and WPA3
+
+Role of PMK in the 4-Way Handshake:
+
+-The PMK is a shared secret key between the client (STA) and the Access Point (AP).
+-It is derived either from a Pre-Shared Key (PSK) in personal mode or from the 802.1X authentication process in enterprise mode.
+-The PMK is not used directly to encrypt data. Instead, it is used to derive a new key called the Pairwise Transient Key (PTK) during the 4-way handshake.

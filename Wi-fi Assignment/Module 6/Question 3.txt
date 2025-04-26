@@ -1,0 +1,36 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+3. Explain the differences between WEP, WPA, WPA2, and WPA3.
+
+1. WEP (Wired Equivalent Privacy):
+
+-It was introduced 1997 (original 802.11 standard)
+-Encryption: RC4 stream cipher with 40 or 104-bit key + 24-bit IV
+-Security: Very weak – can be cracked in minutes using basic tools
+
+2. WPA (Wi-Fi Protected Access):
+
+-It was introduced in 2003 as a temporary fix for WEP
+-Encryption: TKIP (Temporal Key Integrity Protocol) and RC4
+-Authentication: WPA-PSK (Pre-Shared Key) or WPA-Enterprise (802.1X)
+-Security: Better than WEP but still vulnerable
+-Mostly replaced by WPA2
+
+3. WPA2:
+
+-It was introduced in 2004 (mandatory from 2006 for WiFi certification)
+-Encryption: AES (Advanced Encryption Standard) with CCMP (Counter Mode CBC-MAC Protocol)
+-Authentication: WPA2-PSK or WPA2-Enterprise
+-Security: Strong and widely used; vulnerable to KRACK if not patched
+-Current standard in most networks
+
+4. WPA3:
+
+-It was introduced in 2018
+-Encryption: AES with GCMP (Galois/Counter Mode Protocol); forward secrecy
+-Authentication: SAE (Simultaneous Authentication of Equals) replaces PSK
+-Protection against offline brute-force attacks
+-Opportunistic Wireless Encryption (OWE) for open networks
+-Better support for IoT and small devices
+-Gradually replacing WPA2

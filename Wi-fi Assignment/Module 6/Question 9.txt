@@ -1,0 +1,10 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+9. What problem does 802.1X solve in a network?
+
+-802.1X solves the problem of unauthorized access in a network by providing a secure authentication framework before a device is allowed to use the network.
+-Without 802.1X, any device that connects to a wired or wireless network port can start communicating, which is a major security risk especially in enterprise or public networks.
+-It ensures that only authorized users or devices can connect.
+-Before granting access, it uses a login process (like username/password or digital certificates).
+-Works with RADIUS servers for authentication in Enterprise networks.

@@ -1,0 +1,12 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+5. Why was WPA2 introduced?
+
+WPA2 was introduced to address weaknesses in the previous Wi-Fi security standard, WPA, and improve wireless network security. Specifically, WPA2 was designed with a more robust encryption method, the Advanced Encryption Standard (AES), instead of TKIP (Temporal Key Integrity Protocol) used in WPA.
+
+Improvements in WPA2:
+
+-WPA2 uses AES, a highly secure encryption algorithm, to protect data transmitted over the wireless network. This is a significant improvement over the RC4-based TKIP used in WPA, which was found to be vulnerable to attacks.
+-The change to AES made WPA2 significantly more resistant to various attacks, including brute-force attempts to guess the encryption key. 
+-WPA2 offered better management features, making it easier for network administrators to configure and secure their wireless networks. 

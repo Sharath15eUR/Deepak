@@ -1,0 +1,12 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+8. What will happen if we put a wrong passphrase during a 4 Way handshake?
+
+When we put a wrong passphrase in 4 way handshake the client and AP fails to derive the same PMK so the handshake fails. Here is the detailed steps:
+
+-Client uses the wrong passphrase to generate its PMK.
+-During the 4-way handshake, both client and AP attempt to derive the Pairwise Transient Key (PTK) using their versions of the PMK.
+-Since the PMKs are different, the MIC (Message Integrity Code) sent by the client in Message 2 will not match what the AP expects.
+-The AP will reject the handshake due to MIC verification failure.
+-The client will not be allowed to connect to the WiFi network.

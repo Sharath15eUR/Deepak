@@ -1,0 +1,14 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+2. Explain the difference between authentication and encryption in WiFi security.
+
+Authentication:
+
+Authentication is the process of verifying the identity of a user or device attempting to connect to the WiFi network.Once authenticated, the system determines what resources the user or device is authorized to access. 
+Example: WPA2-PSK (Pre-Shared Key) checks if the user has the correct WiFi password. WPA2-Enterprise uses usernames and passwords via a RADIUS server for more secure, individual authentication.
+
+Encryption:
+
+Encryption protects the data transmitted over the WiFi network by scrambling it, making it unreadable to anyone without the decryption key. Encryption ensures that even if someone intercepts the data while it's being transmitted, they cannot understand it. 
+Example: AES encryption (used in WPA2/WPA3) encrypts the data transmitted between the client and the AP.

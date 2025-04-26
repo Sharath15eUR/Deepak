@@ -1,0 +1,15 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+1. What are the pillars of Wi-Fi security?
+
+Three pillars of Wi-Fi security are :
+
+1. Confidentiality
+	Proper encryption and decryption.
+
+2. Integrity
+	Verify if the message is unchanged.
+
+3. Authenticity
+	Verify if the sender is real or not.

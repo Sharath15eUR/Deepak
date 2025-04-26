@@ -1,0 +1,15 @@
+NAME : DEEPAK RAJ D
+ROLL NO : 21EC030
+
+4. Why is WEP considered insecure compared to WPA2 or WPAЗ?
+
+WEP is considered insecure compared to WPA2 and WPA3 because it uses a weak encryption algorithm (RC4) and relies on a single, static key for each network session, making it vulnerable to attacks like key cracking and replay attacks.
+
+WEP's Drawbacks:
+WEP's primary flaw is its reliance on the RC4 algorithm and its use of a single, static key for all network traffic. This makes it relatively easy for attackers to use tools and techniques to crack the encryption and gain unauthorized access to the network. 
+
+WPA and WPA2 Improvements:
+WPA introduced the Temporal Key Integrity Protocol (TKIP), which generates a new key for each data packet, making it harder for attackers to intercept and decrypt the traffic. WPA2 built upon WPA by employing the more robust Advanced Encryption Standard (AES) algorithm. 
+
+WPA3's Improvements:
+WPA3 further enhances security by utilizing newer algorithms and implementing features like Simultaneous Authentication of Equals (SAE) to improve password-based authentication and offer enhanced protection against various attacks. 
