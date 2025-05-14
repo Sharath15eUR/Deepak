@@ -1,0 +1,122 @@
+Q3.
+
+Child process - fork()
+
+The Fork system call is used to create a new process known as the child process. This process runs concurrently with the parent process, which is the process that makes the fork() call. Following the fork() system call, both processes will carry out the subsequent command after a new child process has been formed.
+
+The child process makes use of the same CPU registers, program counter, and open files as the parent process. It returns an integer value and doesn't require any arguments.
+
+Different values that fork returns:
+
+Positive: in parent
+Zero: in child
+Negative: fork failed
+
+
+
+Handing common signals
+
+In C, signals are handled by their default behavior, but the language also provides a way to manage them manually. This process, known as signal handling, allows us to define custom actions for specific signals. By using a signal handler function, we can control how a signal is processed, giving us flexibility in how the program responds to events like errors or interruption
+
+Common signals are:
+SIGINT – Interrupt (Ctrl+C)
+SIGTERM – Termination request
+SIGSEGV – Segmentation fault
+SIGFPE – Floating point exception (e.g., divide by 0)
+SIGILL – Illegal instruction
+SIGABRT – Abort
+
+Example:
+
+//Signal handler
+void handle_sigint(int sig) {
+    printf("\nCaught signal %d (SIGINT). Ctrl+C was pressed.\n", sig);
+    // You can exit, ignore, or clean up here
+}
+
+int main() {
+    // Register handler for SIGINT (Ctrl+C)
+    signal(SIGINT, handle_sigint);
+    return 0;
+}
+
+
+
+
+Exploring different Kernel crashes
+
+A kernel crash happens when the operating system kernel (core) encounters a critical error it can’t recover from. Various Kernel crashes are:
+
+1. Null Pointer Dereference
+Occurs when kernel code tries to access memory through a NULL pointer.
+Leads to segmentation faults or kernel panics.
+
+2. Invalid Memory Access
+Caused by accessing memory outside allocated bounds.
+E.g., Buffer overflows, bad pointer arithmetic.
+
+3.Stack Overflow
+Kernel stack has limited space (usually 8KB in Linux).
+Recursion or large local variables can overflow it.
+
+4.Deadlocks
+Two or more threads/processes waiting for resources held by each other, forever.
+
+5.Race Conditions
+Concurrent access to shared data without proper synchronization.
+We can use Mutex/Spinlocks to prevent Race.
+
+6.Hardware Faults
+Faulty RAM, disk, or CPU can cause kernel panics.
+
+
+
+
+
+Time complexity
+
+Time complexity is a mathematical function that describes the amount of time an algorithm takes to run as a function of the input size (n).
+It helps us analyze and compare the efficiency of algorithms, especially for large inputs.
+
+Common Notation - O()
+
+O(1) Constant Tim
+O(log n) Logarithmic
+O(n) Linear
+O(n log n) Linearithmic
+O(n^2) Quadratic
+O(2^n) Exponential
+O(n!) Factorial
+
+
+
+
+
+Locking mechanism - mutex/spinlock
+
+Mutex:
+
+Prevent race conditions in multithreaded programs.
+Only one thread can lock at a time.
+
+Syntax:
+
+pthread_mutex_t lock;
+pthread_mutex_lock(&lock);
+// Critical section
+pthread_mutex_unlock(&lock);
+
+
+Spinlock:
+
+PU keeps checking lock availability in a loop (busy waiting).
+Faster but CPU-intensive.
+Used in low-contention scenarios (kernel-level).
+
+Syntax:
+
+pthread_spinlock_t spin;
+pthread_spin_init(&spin, 0);
+pthread_spin_lock(&spin);
+// critical section
+pthread_spin_unlock(&spin);

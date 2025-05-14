@@ -1,0 +1,89 @@
+2. In the above program, add signal handling for SIGINT (etc) and prevent termination.
+Convert the above threads to individual functions and note down the time taken and the flow of execution.
+
+Program:
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
+#include <signal.h>
+#include <unistd.h>
+#include <time.h>
+#include <sys/time.h>
+
+int N;
+
+int is_prime(int num) {
+    if (num < 2) return 0;
+    for (int i = 2; i*i <= num; i++)
+        if (num % i == 0)
+            return 0;
+    return 1;
+}
+
+// Thread A: Sum of first N prime numbers
+void* thread_A(void* arg) {
+    int count = 0, num = 2, sum = 0;
+    while (count < N) {
+        if (is_prime(num)) {
+            sum += num;
+            count++;
+        }
+        num++;
+    }
+    printf("Sum of first %d prime numbers: %d\n", N, sum);
+    return NULL;
+}
+
+//Print message every 2 seconds
+void* thread_B(void* arg) {
+    time_t start = time(NULL);
+    while (difftime(time(NULL), start) <= 100) {
+        printf("Thread 1 running\n");
+        sleep(2);
+    }
+    return NULL;
+}
+
+//Print message every 3 seconds
+void* thread_C(void* arg) {
+    time_t start = time(NULL);
+    while (difftime(time(NULL), start) <= 100) {
+        printf("Thread 2 running\n");
+        sleep(3);
+    }
+    return NULL;
+}
+
+// Signal handler for SIGINT
+void handle_sigint(int sig) {
+    printf("\nSIGINT caught. Ignoring Ctrl+C.\n");
+}
+
+int main() {
+    pthread_t tA, tB, tC;
+    struct timeval start, end;
+
+    signal(SIGINT, handle_sigint);
+
+    printf("Enter N (for prime sum): ");
+    scanf("%d", &N);
+
+    gettimeofday(&start, NULL); // Start time
+
+    pthread_create(&tA, NULL, thread_A, NULL);
+    pthread_create(&tB, NULL, thread_B, NULL);
+    pthread_create(&tC, NULL, thread_C, NULL);
+
+    pthread_join(tA, NULL);
+    pthread_join(tB, NULL);
+    pthread_join(tC, NULL);
+
+    gettimeofday(&end, NULL); // End time
+
+    long seconds = end.tv_sec - start.tv_sec;
+    long micros = ((seconds * 1000000) + end.tv_usec) - (start.tv_usec);
+
+    printf("Total time taken: %ld seconds and %ld microseconds\n", micros / 1000000, micros % 1000000);
+    return 0;
+}

@@ -1,0 +1,40 @@
+Q3. You are given a 2D matrix of size n x n where each row and each column is sorted in increasing order. Write a C function to determine whether a given key exists in the matrix using the most efficient approach.
+
+#include <stdio.h>
+
+int main() {
+    int matrix[100][100];
+    int n, key;
+
+    printf("Enter the size of matrix (n x n): ");
+    scanf("%d", &n);
+
+    printf("Enter the elements: \n");
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < n; j++)
+            scanf("%d", &matrix[i][j]);
+
+    printf("Enter the key to search: ");
+    scanf("%d", &key);
+
+    int i = 0, j = n - 1;
+    int found = 0;
+
+    while (i < n && j >= 0) {
+        if (matrix[i][j] == key) {
+            found = 1;
+            break;
+        }
+        else if (matrix[i][j] > key)
+            j--;
+        else
+            i++;
+    }
+
+    if (found)
+        printf("%d found in the matrix.\n", key);
+    else
+        printf("%d not found in the matrix.\n", key);
+
+    return 0;
+}

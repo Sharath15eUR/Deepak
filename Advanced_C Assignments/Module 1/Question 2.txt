@@ -1,0 +1,56 @@
+Write a function in C that takes a pointer to an integer array and its size, and then rearranges the array in-place such that all even numbers appear before odd numbers, preserving the original relative order using only pointer arithmetic.
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void rearrange(int *arr, int size) {
+    int *temp = (int *)malloc(size * sizeof(int));
+    int *ptr = arr;
+    int *t = temp;
+
+    for (int i = 0; i < size; i++) {
+        if (*(ptr + i) % 2 == 0)
+            *t++ = *(ptr + i);
+    }
+    for (int i = 0; i < size; i++) {
+        if (*(ptr + i) % 2 != 0)
+            *t++ = *(ptr + i);
+    }
+    for (int i = 0; i < size; i++) {
+        *(arr + i) = *(temp + i);
+    }
+
+    free(temp);
+}
+
+int main() {
+    int size;
+    printf("Enter number of elements: ");
+    scanf("%d", &size);
+
+    int *arr = (int *)malloc(size * sizeof(int));
+    if (arr == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    printf("Enter %d elements:\n", size);
+    for (int i = 0; i < size; i++) {
+        scanf("%d", arr + i);  // using pointer arithmetic
+    }
+
+    printf("Original array:\n");
+    for (int i = 0; i < size; i++)
+        printf("%d ", *(arr + i));
+    printf("\n");
+
+    rearrange(arr, size);
+
+    printf("Rearranged array:\n");
+    for (int i = 0; i < size; i++)
+        printf("%d ", *(arr + i));
+    printf("\n");
+
+    free(arr);
+    return 0;
+}
